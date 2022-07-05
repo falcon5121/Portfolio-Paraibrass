@@ -6,9 +6,9 @@ export default function () {
     return (
         <div>
             <ul className="caixa">
-                <li></li>
-                <li></li>
-                <li></li>
+                <li className="linhas"></li>
+                <li className="linhas"></li>
+                <li className="linhas"></li>
             </ul>
         </div>
     )

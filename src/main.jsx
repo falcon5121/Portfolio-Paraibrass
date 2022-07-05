@@ -7,11 +7,12 @@ import './Cards/Cards.css'
 import Carousel from './Components/Carrossel/carrossel'
 import Videos from './Components/Videos/Videos'
 
+
 import menu from "./Menu/Menu"
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <App  className="box-border font-sans"/>
      <div> {/* Classe de organização dos cards */}
      
      <Carousel className="container1"/>

@@ -1,20 +1,32 @@
 .caixa {
-    height: 1.8vw;
+    margin-top: 6vw;
+
+    width: 5vw;
+    height: 5vw;
+
     background-color: #FF4E44;
-    display: flex;
+    
+    display: none;
+    margin: auto;
+   
+    
+
     flex-direction: column;
+
     transform: scale(1.6);
     border-radius: 15%;
     transition: 0.2s;
+
 }
 .caixa:hover {
     transform: scale(2);
 }
 
-.caixa li {
-    margin: 2px 5px;
-    width: 1.3vw;
-    border-bottom: solid 3px #ffffff;
+.caixa .linhas {
+    
+    margin: 0.3vw auto;
+    width: 3.7vw;
+    border-bottom: solid 4px #ffffff;
     border-radius: 5px;
     box-shadow: 0px 1px 1px  #00000059;
 }
