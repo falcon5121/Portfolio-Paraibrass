@@ -9,16 +9,18 @@ export default function carrosel () {
     const carousel = useRef(null)
 
     const handleLeftClick = (e) => {
-        carousel.current.scrollLeft += -368
+        carousel.current.scrollLeft -= carousel.current.offsetWidth
     }
     
     const handleRightClick = (e) => {
-        carousel.current.scrollLeft += 368
+        console.log(carousel.current.offsetWidth)
+        carousel.current.scrollLeft += carousel.current.offsetWidth
     }
     
     return (
+        
         <div className="txt">
-                    <h1>BIOGRAFIA</h1>
+                    <h1 className="biografia">BIOGRAFIA</h1>
             <div className="arrow">
                 <ArrowBackIos className="setas" onClick={handleLeftClick} transition="transform 0.2s"/>
                 <div className="container1" ref={carousel}>
@@ -79,11 +81,11 @@ export default function carrosel () {
                 />
 
                 </div>
-
                 <ArrowForwardIos className="setas" onClick={handleRightClick}/>
+        </div>
+
 
             </div>
 
-        </div>
     )
 }

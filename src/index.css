@@ -8,17 +8,34 @@
     font-weight: 100;
 }
 
-@media screen and (max-width: 1097px) {
-    .space {
-    margin: 0 8rem;
-    }
+@media screen and (max-width: 1366px) {
     
-    .tela{
+     .tela{
         font-size: 1em;
-        margin: auto 1rem;
+        margin: auto
     }
+
+    
 }
-@media screen and (max-width: 875px) {
+@media screen and (max-width: 414px) {
+    .tela {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+        flex-direction: row;
+        gap: 10rem;
+        
+    }
+
+    .logo{
+        display: flex;
+    }
+    .caixa {
+        display: flex;
+    }
+
 
     .tela{
         font-size: 0.8em;
@@ -26,32 +43,31 @@
         width: min-content;
     }
     
-.hidden {
-    
-    display: initial !important;
-}
+    .hidden {
+        
+        display: initial !important;
+    }
+
+
 }
 
 
-@media screen and (max-width: 654px) {
+@media screen and (max-width: 375px) {
     
     .tela {
         display: none;
     }
     
     .container {
-        margin-top: -20vw;
+        margin-top: -10vw;
+        margin-bottom: -30vw;
     }
 
     .mobile {
         display: flex;
-        justify-content: space-between;
-    }
-
-    .Sexteto {
-    width: 80vw;
-    margin: 10.5rem auto;
-    display: flex;
+        flex-direction: row;
+        gap: 10rem;
+        
     }
 
     .logo{
@@ -64,6 +80,12 @@
     .hidden {
         display: initial !important;
     
+    }
+
+    section.container > .Sexteto {
+        width: 80vw;
+        margin-left: auto;
+        margin-right: auto;
     }
     }
 
@@ -121,7 +143,7 @@ li:hover {
 
 .Sexteto {
     width: 80vw;
-    margin: 12.5rem auto;
+    margin: 6rem auto;
     display: flex;
     justify-content: center;
 }

@@ -17,7 +17,7 @@ export default function () {
     
     return (
         <div className="txt margem">
-            <h1 className="">VIDEOS</h1>
+            <h1 className="biografia">VIDEOS</h1>
 
 <div className="centralizado">
     <ArrowBackIos className="setas" onClick={handleLeftClick}/>

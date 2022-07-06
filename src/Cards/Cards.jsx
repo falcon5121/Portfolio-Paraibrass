@@ -6,7 +6,7 @@ export default function ({imagem, texto}) {
         <section className="Cards">
             <div className="Card">
                 <img src={ imagem } alt="Icone de Perfil" />
-                <div></div>
+                <div className="linha"></div>
                 <p>{ texto } </p>
             </div>
         </section>
