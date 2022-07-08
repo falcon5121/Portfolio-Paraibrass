@@ -148,9 +148,6 @@ li:hover {
     justify-content: center;
 }
 
-.Menu {
-    visibility: hidden;
-}
 
 .hidden {
     top: 250vw;
@@ -158,4 +155,15 @@ li:hover {
     z-index: -1;
     width: 100%;
     display: none;
+}
+
+
+/* Menu Mobile */
+
+
+.menuMobile {
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    
 }

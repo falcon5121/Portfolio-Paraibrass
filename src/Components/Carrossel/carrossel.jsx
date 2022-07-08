@@ -13,7 +13,6 @@ export default function carrosel () {
     }
     
     const handleRightClick = (e) => {
-        console.log(carousel.current.offsetWidth)
         carousel.current.scrollLeft += carousel.current.offsetWidth
     }
     
