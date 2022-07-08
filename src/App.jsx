@@ -32,7 +32,7 @@ export default function () {
 
     return (
     <div className="vetor">
-        <div className="menuMobile">
+        
              <nav className="navbar">
 
                 <ul className="mobile">
@@ -66,7 +66,6 @@ export default function () {
             className=" hidden absolute"/>
             
             
-        </div>
     </div>
     )
 }
