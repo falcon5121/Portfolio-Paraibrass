@@ -9,19 +9,18 @@ import Videos from './Components/Videos/Videos'
 
 
 
-import menu from "./Menu/Menu"
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-
-    <App className="invisible"/>
-
+    
+    <App/>
+    
      <div> {/* Classe de organização dos cards */}
      
      <Carousel className="container1"/>
       <Videos/>
 
     </div>
-    
   </React.StrictMode>
 )
