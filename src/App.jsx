@@ -20,7 +20,6 @@ import Card from "./Cards/Cards";
 }
 
 import logo from "./imagens/Paraibrass_logo.svg";
-
 import sexteto from "./imagens/FIMUS.svg";
 
 {
