@@ -1,0 +1,25 @@
+.margem{
+    margin-top: 6vw;
+}
+
+
+.videos {
+
+    margin: 6vw auto;
+    display: flex;
+    width: 1200px;
+    height: 720px;
+    overflow: hidden;
+}
+
+.Player-video{
+    display: flex;
+    
+}
+
+.centralizado{
+    display: flex;
+    align-items: center;
+    margin: 0 10%;
+}
+

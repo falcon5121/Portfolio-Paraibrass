@@ -1,4 +1,6 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
 * {
     scroll-behavior: smooth;
     margin: 0;
@@ -135,6 +137,14 @@
     }
 
 
+
+
+
+
+
+/* Plano de Fundo */
+
+
 .img, .details {
     position: absolute;
     left: 0;
@@ -156,8 +166,12 @@
 }
 
 .navbar ul li {
+
     
     
+
+    font-size: 1.2em;
+    font-weight: 500;
     margin: auto 1.875rem;
     cursor: pointer;
     list-style: none;
@@ -169,6 +183,7 @@
     color: #FF4E44;
     
 }
+
 .navbar ul li a:hover {
     color: #FF4E44;
     
