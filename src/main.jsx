@@ -1,9 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
-import Card from './Cards/Cards'
-import './index.css'
-import './Cards/Cards.css'
+
 
 
 

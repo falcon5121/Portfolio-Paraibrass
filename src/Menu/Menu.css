@@ -11,20 +11,20 @@
     
     flex-direction: column;
 
-    transform: scale(1.8);
+    transform: scale(2);
     border-radius: 15%;
     transition: 0.2s;
 
 }
 .caixa:hover {
-    transform: scale(2);
+    transform: scale(2.2);
 }
 
 .caixa .linhas {
     
-    margin: 0.4vw auto;
-    width: 3.7vw;
+    margin: 4px auto;
+    width: 16px;
     border-bottom: solid 2px #ffffff;
     border-radius: 5px;
-    box-shadow: 0px 1px 1px  #00000059;
+    box-shadow: 1px 1px 0px  #000000a1;
 }

@@ -2,23 +2,27 @@ import React, { useState, useRef } from "react";
 import Menu from "./Menu/Menu";
 import Player from "./Components/Player/Player";
 
-
-
-
-import Brightness1Icon from "@mui/icons-material/Brightness1";
 import SearchIcon from "@mui/icons-material/Search";
 import { ArrowBackIos } from "@mui/icons-material";
 import { ArrowForwardIos } from "@mui/icons-material";
 
+import { Navigation, Pagination} from 'swiper';
+import {Swiper, SwiperSlide} from "swiper/react"
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+
+
 import "./Cards/Cards.css";
 import Card from "./Cards/Cards";
-
 {
   /* Fotos */
 }
 
 import logo from "./imagens/Paraibrass_logo.svg";
-import sexteto from "./imagens/FIMUS.svg";
+import sexteto from "./imagens/FIMUS.png";
+import menor from "./imagens/menor.png"
 
 {
   /* Arquivos CSS */
@@ -36,6 +40,7 @@ export default function () {
   };
 
   const handleRightClick = (e) => {
+    console.log(carousel.current.offsetWidth);
     carousel.current.scrollLeft += carousel.current.offsetWidth;
   };
 
@@ -79,7 +84,7 @@ export default function () {
         <article className="pagina1">
           <nav className="navbar">
             <ul className="mobile">
-              <li className="tela logo ">
+              <li className="logo">
                 <img src={logo} alt="Logo do Paraibrass" />
               </li>
 
@@ -110,111 +115,64 @@ export default function () {
             </ul>
           </nav>
 
-          <section>
+          <section className="containerPg1">
             <div className="retRed"></div>
             <div className="retBlack">
               <h1>Sexteto</h1>
               <h2>Paraibrass</h2>
               <p>João Pessoa - PB</p>
             </div>
-          </section>
 
-          <div className="backSexteto">
-            <img src={sexteto} alt="" className="imgSexteto" />
-          </div>
+            <div className="backSexteto" id="Home">
+              <picture>
+                <source src={sexteto} alt="" className="imgSexteto" media="(min-width: 644px)"/>
+                <img src={ menor } alt="imgSexteto" className="imgSexteto" />
+              </picture>
+            </div>
+          </section>
         </article>
 
         <article className="pagina2">
           {/* Cards de Biografia */}
 
           <div className="txt" id="txt">
-            <section>
-              <div className="tinyRetRed"></div>
+            <section className="letreiro1">
+              <div className="tinyRetRed" id="Biografia"></div>
               <div className="tinyRetBlack">
-                <h1 className="biografia" id="Biografia">
-                  BIOGRAFIA
-                </h1>
+                <h1 className="biografia">BIOGRAFIA</h1>
               </div>
             </section>
-
-            <div className="arrow">
-              <ArrowBackIos className="setas" onClick={handleLeftClick} />
-              <div className="container1" ref={carousel}>
-                <Card
-                  imagem="https://github.com/falcon5121.png"
-                  texto="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id enim et diam fringilla bibendum. 
-                Aenean vestibulum feugiat ipsum. Etiam faucibus turpis id tellus gravida, 
-                tempor ornare felis suscipit. Nulla in leo quis nulla sollicitudin tempus blandit ut justo. 
-                Nullam luctus risus id placerat ullamcorper. Nam nulla nulla, fermentum in nulla vel, mollis molestie neque. 
-                Proin placerat dui ut sem condimentum condimentum. Cras malesuada mauris sed nulla ultrices, vel egestas leo tristique. 
-                Vivamus mollis eu quam eu tempor. Phasellus scelerisque, sem vitae"
-                />
-                <Card
-                  imagem="https://github.com/falcon5121.png"
-                  texto="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id enim et diam fringilla bibendum. 
-                Aenean vestibulum feugiat ipsum. Etiam faucibus turpis id tellus gravida, 
-                tempor ornare felis suscipit. Nulla in leo quis nulla sollicitudin tempus blandit ut justo. 
-                Nullam luctus risus id placerat ullamcorper. Nam nulla nulla, fermentum in nulla vel, mollis molestie neque. 
-                Proin placerat dui ut sem condimentum condimentum. Cras malesuada mauris sed nulla ultrices, vel egestas leo tristique. 
-                Vivamus mollis eu quam eu tempor. Phasellus scelerisque, sem vitae"
-                />
-                <Card
-                  imagem="https://github.com/falcon5121.png"
-                  texto="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id enim et diam fringilla bibendum. 
-                Aenean vestibulum feugiat ipsum. Etiam faucibus turpis id tellus gravida, 
-                tempor ornare felis suscipit. Nulla in leo quis nulla sollicitudin tempus blandit ut justo. 
-                Nullam luctus risus id placerat ullamcorper. Nam nulla nulla, fermentum in nulla vel, mollis molestie neque. 
-                Proin placerat dui ut sem condimentum condimentum. Cras malesuada mauris sed nulla ultrices, vel egestas leo tristique. 
-                Vivamus mollis eu quam eu tempor. Phasellus scelerisque, sem vitae"
-                />
-                <Card
-                  imagem="https://github.com/falcon5121.png"
-                  texto="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id enim et diam fringilla bibendum. 
-                Aenean vestibulum feugiat ipsum. Etiam faucibus turpis id tellus gravida, 
-                tempor ornare felis suscipit. Nulla in leo quis nulla sollicitudin tempus blandit ut justo. 
-                Nullam luctus risus id placerat ullamcorper. Nam nulla nulla, fermentum in nulla vel, mollis molestie neque. 
-                Proin placerat dui ut sem condimentum condimentum. Cras malesuada mauris sed nulla ultrices, vel egestas leo tristique. 
-                Vivamus mollis eu quam eu tempor. Phasellus scelerisque, sem vitae"
-                />
-                <Card
-                  imagem="https://github.com/falcon5121.png"
-                  texto="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id enim et diam fringilla bibendum. 
-                Aenean vestibulum feugiat ipsum. Etiam faucibus turpis id tellus gravida, 
-                tempor ornare felis suscipit. Nulla in leo quis nulla sollicitudin tempus blandit ut justo. 
-                Nullam luctus risus id placerat ullamcorper. Nam nulla nulla, fermentum in nulla vel, mollis molestie neque. 
-                Proin placerat dui ut sem condimentum condimentum. Cras malesuada mauris sed nulla ultrices, vel egestas leo tristique. 
-                Vivamus mollis eu quam eu tempor. Phasellus scelerisque, sem vitae"
-                />
-                <Card
-                  imagem="https://github.com/falcon5121.png"
-                  texto="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id enim et diam fringilla bibendum. 
-                Aenean vestibulum feugiat ipsum. Etiam faucibus turpis id tellus gravida, 
-                tempor ornare felis suscipit. Nulla in leo quis nulla sollicitudin tempus blandit ut justo. 
-                Nullam luctus risus id placerat ullamcorper. Nam nulla nulla, fermentum in nulla vel, mollis molestie neque. 
-                Proin placerat dui ut sem condimentum condimentum. Cras malesuada mauris sed nulla ultrices, vel egestas leo tristique. 
-                Vivamus mollis eu quam eu tempor. Phasellus scelerisque, sem vitae"
-                />
-              </div>
-              <ArrowForwardIos className="setas" onClick={handleRightClick} />
-            </div>
+              <article className="swiperCards">
+                <Swiper
+                modules={[Navigation, Pagination]}
+                navigation
+                // pagination={{clickable: true}}
+                loop={true}
+                spaceBetween={0}
+                slidesPerView={3}
+                onSlideChange={() => console.log('slide change')}
+                onSwiper={(swiper) => console.log(swiper)}
+                className="swiperCardsItem"
+                >
+                  <SwiperSlide className="item"><Card/></SwiperSlide>
+                  <SwiperSlide className="item"><Card/></SwiperSlide>
+                  <SwiperSlide className="item"><Card/></SwiperSlide>
+                  <SwiperSlide className="item"><Card/></SwiperSlide>
+                </Swiper>
+              </article>
           </div>
         </article>
 
         <article className="pagina3">
           {/* Carrossel de Videos */}
 
-          <section>
-              <div className="tinyRetRed2"></div>
-              <div className="tinyRetBlack2">
-                  
-            <h1 className="biografia" id="Videos">
-              VIDEOS
-            </h1>
-            
-              </div>
-          </section>
-
           <div className="cardDeVideo">
+            <section className="letreiro2">
+              <div className="tinyRetRed2" id="Videos"></div>
+              <div className="tinyRetBlack2">
+                <h1 className="biografia">VIDEOS</h1>
+              </div>
+            </section>
 
             <div className="centralizado">
               <ArrowBackIos
@@ -235,7 +193,9 @@ export default function () {
                 onClick={handleRightClickVideos}
               />
             </div>
-            <article className="conteudo">
+            
+          </div>
+          <article className="conteudo">
               <h1>Música</h1>
               <h3>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
@@ -244,7 +204,6 @@ export default function () {
                 sequi! Quidem.
               </h3>
             </article>
-          </div>
         </article>
 
         {/* Parte Mobile da Pagina */}
@@ -278,10 +237,3 @@ export default function () {
     </div>
   );
 }
-
-
-    
-        
-    
-
-

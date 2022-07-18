@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
 
 * {
@@ -22,7 +21,138 @@
     --sombra5: 3px 1px 0 rgba(0, 0, 0, 0.534);
     --bordar2: 1vw;
 
+    --retRed: 7vmax;
+    --retBlack: 13vmax;
+
+
 }
+
+@media (min-height: 1368px) {
+
+    div.retRed{
+        z-index: 1;
+    }
+
+    div.retBlack{
+        z-index: 1;
+    }
+
+
+    .tela{
+        display: none;
+    }
+
+    .logo {
+        display: block;
+    }
+
+    .caixa{
+        width: auto;
+        height: auto;
+        display: block;
+        z-index: 10;
+    }
+
+    div.backSexteto {
+        width: 95%;
+        height: 70vh;
+    }
+
+    div.backSexteto > picture > img {
+        width: 90%;
+        height: 90%;
+    }
+    
+}
+
+
+@media (max-width: 865px) {
+    nav.navbar {
+        width: 90%;
+    }
+    
+    nav.navbar ul li {
+    margin: auto 0;
+    }
+
+    .logo {
+        transform: scale(0.6);
+    }
+
+
+    div.retRed{
+        width: 50%;
+        z-index: 1;
+    }
+
+    div.retBlack{
+        margin-left: 13%;
+        z-index: 1;
+    }
+
+
+    .tela{
+        display: none;
+    }
+
+    .logo {
+        display: block;
+    }
+
+    .caixa{
+        width: auto;
+        height: auto;
+        display: block;
+        z-index: 10;
+        margin-right: 10px;
+    
+    }
+
+    div.backSexteto {
+        width: 95%;
+        height: 70vh;
+    }
+
+    
+
+    div.backSexteto > picture > img {
+        width: 90%;
+        height: 90%;
+    }
+
+}
+
+ @media (max-width: 460px) {
+    
+    div.retRed{
+        width: 40%;
+        z-index: 1;
+    }
+
+    div.retBlack {
+        margin-left: 0;
+        
+    }
+
+    div.backSexteto {
+        width: 90%;
+        height: 60vh;
+    }
+
+    
+
+    div.backSexteto > picture > img {
+        width: 90%;
+        height: 90%;
+    }
+
+
+    
+} 
+
+
+   
+
 
 /* Novo plano de Fundo */
 
@@ -48,10 +178,17 @@
         height: 100vh;
     }
 
+    .pagina1{
+        display: flex;
+        flex-direction: column;
+    }
+
     .pagina1, .pagina3 {
         background-color: var(--primary-color);
     }
-  
+    
+    
+
     .pagina2 {
         top: 100%;
         background-color: var(--secondary-color);
@@ -61,172 +198,230 @@
     .pagina3 {
         top: 200%;
         display: flex;
+        flex-direction: column;
     }
     /* Plano de Fundo */
 
+    .containerPg1 {
+        display: flex;
+    }
 
+
+    .logo {
+        transform: scale(0.8);
+    }
     .retRed{
+
+        z-index: 5;
+        
+        
         left: 0;
-        bottom: 10vw;
+        bottom: 6vmax;
         position: absolute;
-        width: 34vw;
-        height: 34vh;
+
+
+        width: 34vmax;
+        height: 19vmax;
+
+
+
         background-color: var(--third-color);
         border-top-right-radius: var(--borda);
         border-bottom-right-radius: var(--borda);
         filter: drop-shadow(var(--sombra2));
+
     }
+    
     .retBlack{
-        bottom: 8vw;
-        left: 11vw;
+
+        z-index: 5;
+
+        bottom: 4vmax;
+        left: 11vmax;
         position: absolute;
-        width: 38vh;
-        height: 34vw;
+
+        width: 20vmax;
+        height: 34vmax;
+
+
         background: var(--secondary-color);
         border-radius: var(--borda);
         filter: drop-shadow(var(--sombra2));
+
+
         display: flex;
         justify-content: center;
         align-content: center;
         align-items: center;
         flex-direction: column;
+
     }
 
     .retBlack > h1, h2, p {
+
         color: #fff;
         font-weight: 700;
         text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.425);
+
     }
 
 
     .retBlack > h1 {
-        font-size: 5rem;
+
+        font-size: 4vmax
+
     }
 
     .retBlack > h2 {
-        font-size: 5rem;
+
+        font-size: 4.5vmax;
+
     }
 
     .retBlack > p {
-        font-size: 2rem;
+
+        font-size: 2vmax;
         font-style: italic;
+
     }
 
     .backSexteto {
-        width: 54vw;
-        height: 87vh;
+    display: flex;
+        width: 54vmax;
+        
+        /* height: 80vh; */
+        height: 41vmax;
+        /* height: 42vw; */
+        
+        
+        margin-left: auto;
+        
+        
         background-color: var(--secondary-color);
-
-        position: absolute;
-        right: 0;
-        top: 5vw;
-
         border-radius: var(--borda);
         filter: drop-shadow(var(--sombra));
+
     }
 
     .imgSexteto {
+        
         margin-top: 6px;
         
-        width: 48vw;
+        
+        
+        position: fixed; 
+
+        
+        
+        width: 90%; 
+        height: 39vmax; 
+        
+        position: absolute; 
+        right: 5px; 
         
         filter: drop-shadow(var(--sombra));
-        position: absolute;
-        right: 5px;
-        
     }
 
 
 
 
-
-
-
-/* Plano de Fundo */
-
-
-.img, .details {
-    position: absolute;
-    left: 0;
-    top: 0%;
-    width: 100%;
-    display: flex;
-    margin: auto;
-    z-index: -1;
-}
-
 /* Barra de Navegação */
 .navbar {
-    margin: auto;
+    margin-inline: auto;
+    width: 70%;
+    display: block;
+    margin-top: -0.5vmax;
+    align-items: center;
+    
 }
 
 .navbar > ul {
+
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+
 }
+
 
 .navbar ul li {
 
-    
-    
-
-    font-size: 1.2em;
+    font-size: 0.3vmax;
     font-weight: 500;
-    margin: auto 1.875rem;
-    cursor: pointer;
-    list-style: none;
     color: white;
+
+    margin: auto 2vmax;
+    
+    list-style: none;
+
+    cursor: pointer;
+
     transition: 0.3s;
+
 }
 
+
+
 .navbar ul li:hover {
-    color: #FF4E44;
+
+    color: var(--third-color);
     
 }
 
 .navbar ul li a:hover {
-    color: #FF4E44;
+
+    color: var(--third-color);
     
 }
 
 .navbar ul li a {
+
     font-weight: 400;
-    font-size: 1.2em;
+    font-size: 1.2vmax;
     text-decoration: none;
     color: #fff;
+
     transition: 0.3s;
 }
 
 
 
 .navbar .search {
+
+
     transform: scale(1.8);
     transition: 0.1s;
+
 }
 
 .navbar .search:hover {
+
     transform: scale(2);
 }
 
-.space {
-    margin: 0 2.5rem;
-}
 
 .cima {
     z-index: 10;
 }
 
+.navbar section {
+    width: 100%;
+}
 
 
 /* Foto do Sexteto e Detalhes do Meio da Pagina */
 
 
 .hidden {
+
     top: 250vw;
     position: absolute;
+
     z-index: -1;
+
     width: 100%;
+
     display: none;
+
 }
 
 
@@ -235,12 +430,15 @@
 
 .menuMobile {
     
+    background: var(--third-color);
 
-    
     height: 100vh;
-    background: #FF4E44;
-    position: fixed;
     z-index: 1;
+
+    box-shadow: -20vw 0 0 rgba(0, 0, 0, 0.308);
+
+
+    position: fixed;
     top: 0;
     right: 0;
     
@@ -265,7 +463,7 @@
 
 .mobileNav {
     
-    font-size: 1.4em;
+    font-size: 2.5vmax;
     color: #fff;
     
     margin: 10vw 0;
@@ -275,23 +473,31 @@
 
     /* transition: ease-in-out 0.2s; */
     transition: 0.6s;
+
+    cursor: pointer;
 }
 
-.mobileNav:active{ 
+.mobileNav:hover{ 
     transform: scale(1.3);
 }
 
 .mobileNav > a {
+
     font-weight: 400;
+
 }
 .footer {
+
     color: white;
-    display: flex;
-    justify-content: center;
     font-style: italic;
     text-decoration: none;
     font-size: 1.2em;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.413);
+
+    display: flex;
+    justify-content: center;
+    
+
 }
 
 u > a {
@@ -305,90 +511,118 @@ u > a {
 /* Margem de baixo da foto do sexteto */
 
 .txt {
-        margin-top: 3vw;
-        margin-left: 5vw;
-        margin-right: 5vw;
+    
+    
+
+
+        margin: 3vmax 5vmax 0 5vmax;
+
         background-color: white;
+        
+
         border-radius: var(--borda);
         box-shadow: var(--sombra2);
-        height: 90vh;
+
+        height: 90%;
     }
 
-.biografia {
-    margin-top: 0;
-    
-}
+
 
 /* Texto */
 
 /* Carrossel de Cards */
 
+.letreiro1 {
+    
+    width: 17vmax;
+    height: 10vmax;
+    
+    margin: auto;
+    align-items: center;
+    display: flex;
+}
+
+
+
 
 .tinyRetRed{
-    width: 7vw;
-    height: 26vh;
 
+    width: var(--retRed); 
+    height: var(--retBlack); 
+
+    
+    top: 0;
+    margin-left: 2vw;
+    position: absolute;
+    
+    background-color: var(--third-color);
     border-bottom-left-radius: var(--bordar2);
     border-bottom-right-radius: var(--bordar2);
-
-    top: 0;
-    left: 41vw;
-    position: absolute;
-
-    background-color: var(--third-color);
-    
     box-shadow: var(--sombra4);
+
 }
 
 .tinyRetBlack{
-    width: 35vh;
-    height: 7vw;
 
-    border-radius: var(--bordar2);
+    width: 17vmax;
+    height: 7vmax;
 
-    top: 2vw;
-    left: 34vw;
+    
+    
+    
     position: relative;
+
+    
     display: flex;
     align-items: center;
-    padding-left: 1vw;
-
+    padding-left: 1vmax;
+    
+    
     background-color: var(--primary-color);
-
+    border-radius: var(--bordar2);
     box-shadow: var(--sombra4);
+
 }
 
 .biografia{
-    text-align: center;
+
     font-weight: 700;
-    font-size: 4rem;
+    font-size: 3.3vmax;
+
     color: #ffffff;
+
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.527);
+
 }
 
 
 
 /* Div dos Components */
 
+
 .container1 {
+
     margin: auto;
+
     overflow-x: hidden;
-    width: 1100px;
-    height: 550px;
+
+    width: 51.5vmax;
+    height: 28vmax;
+
 }
 
 .container1, .arrow {
+
     margin-top: 3vw;
-    /* display: grid; */
-    /* grid-auto-flow: column;
-    place-items: center; */
+
     display: flex;
     align-content: center;
     align-items: center;
 }
 
 .Cards {
-    position: relative;
+
+    
     display: flex;
     justify-content: space-between;
     
@@ -398,55 +632,82 @@ u > a {
 
 
 .arrow > .setas{
+
     color: #000;
+
     transform: scale(2.3);
+
     cursor: pointer;
     margin: auto;
+
     transition:  0.2s; 
+
 }
 
 .arrow > .setas:hover {
+
      transform: scale(2.6); 
+
 } 
 
 /* Biografica Card */
 
 .Card {
+
     margin: 0 20px;
     position: relative;
-    width: 328px;
-    height: 490px;
-    background-color: var(--third-color);
-    /* margin-top: 20vw; */
+
+    /* width: 328px;
+    height: 490px; */
+
+    width: 15vmax;
+    height: 25vmax;
+
     border-radius: 1.875rem;
     transition: transform 0.2s;
+    
+    background-color: var(--third-color);
     box-shadow: var(--sombra3);
+
 }
 
 .Card img {
-    width: 6vw;
+
+    width: 6vmax;
+
     display: flex;
-    position: relative;
-    top: 15px;
     margin: auto;
+    
+    position: relative;
+    top: 1vmax;
+
     border-radius: 50%;
+
 }
 
 .Card div.linha {
+
     display: flex;
     justify-content: center;
+
     margin-left: auto;
     margin-right: auto;
-    margin-top: 30px;
-    width: 230px;
+    margin-top: 1.8vmax;
+
+    width: 12vmax;
+
     border-bottom: solid 3px #201F29;
+
 }
 
 .Card p {
-    font-size: 1em;
-    padding: 10px 40px;
+
+    font-size: 0.73vmax;
     color: #fff;
-    margin-left: 10px;
+
+    padding: 0.7vmax 2vmax;
+    
+
 }
 
 /* Efeitos Card */
@@ -458,17 +719,29 @@ u > a {
 }
 
 
-
-
 /* Carrossel de Videos */
+
+.letreiro2 {
+    
+    margin: 0 auto;
+    width: 15vmax;
+    height: 12vmax;
+    
+    display: flex;
+    align-items: center;
+}
+
+
 
 .tinyRetRed2{
 
-    width: 5vw;
-    height: 17vh;
+    width: var(--retRed); 
+    height: 16vmax; 
 
-    left: 43vw;
+
     position: absolute;
+    margin-left: 4vw;
+    
 
     box-shadow: var(--sombra4);
     background-color: var(--third-color);
@@ -479,11 +752,11 @@ u > a {
 
 .tinyRetBlack2{
 
-    width: 26vh;
-    height: 5vw;
+    width: var(--retBlack); 
+    height: var(--retRed); 
 
-    top: 3vw;
-    left: 42vw;
+    
+    margin-left: 2vw;
     position: absolute;
 
     
@@ -504,14 +777,16 @@ u > a {
     width: 90vw;
     height: 80vh;
     
-    align-items: center;
+    display: flex;
     justify-content: center;
-
+    align-items: center;
     margin: 2vw auto;
     
     background-color: var(--secondary-color);
     border-radius: var(--borda);
     box-shadow: var(--sombra2);
+
+    flex-direction: column;
     
     
 }
@@ -521,7 +796,8 @@ u > a {
 .centralizado { /* local onde estao as setas e o .videos*/
 
     display: flex;
-    margin-top: 4.5vw;
+    align-items: center;
+    justify-content: center;
     
 
 }
@@ -551,8 +827,8 @@ u > a {
 
 .videos { /* Div com o local onde esta armazenado os videos*/
 
-    margin: 3vw 0;
     display: flex;
+    
     
     overflow: hidden;
     
@@ -580,6 +856,7 @@ u > a {
 .conteudo{
 
     margin: auto;
+    
     border-radius: var(--borda);
 
     width: 52vw;
@@ -595,8 +872,8 @@ u > a {
 
     font-weight: 700;
 
-    line-height: 2em;
-    font-size: 2.5em;
+    margin: auto;
+    font-size: 3vmax;
 
     text-align: center;
 
@@ -606,8 +883,39 @@ u > a {
 
     text-align: center;
     
-    font-size: 1.5em;
+    font-size: 1.7vmax;
     font-weight: 500;
     
 }
 
+.swiperCards {
+    align-items: center;
+    margin-block: 20vw;
+    display: flex;
+    margin: auto;
+    width: 50%;
+    background-color: #101010;
+    color: #fff;
+    font-size: 20px;
+    height: 60%;
+}
+
+.item {
+    
+    margin-top: 5vh;
+    
+}
+
+.swiperCardsItem{
+    
+    margin: auto;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+}
+
+.swiper-button-prev {
+    margin: auto;
+}
