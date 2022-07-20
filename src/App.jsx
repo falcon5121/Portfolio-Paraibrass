@@ -125,8 +125,8 @@ export default function () {
 
             <div className="backSexteto" id="Home">
               <picture>
-                <source src={sexteto} alt="" className="imgSexteto" media="(min-width: 644px)"/>
-                <img src={ menor } alt="imgSexteto" className="imgSexteto" />
+                <img src={sexteto}  className="imgSexteto" id="maior"/>
+                <img src={ menor } alt="imgSexteto" className="imgSexteto" id="menor"/>
               </picture>
             </div>
           </section>

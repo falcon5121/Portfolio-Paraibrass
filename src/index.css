@@ -53,6 +53,8 @@
         z-index: 10;
     }
 
+    
+
     div.backSexteto {
         width: 95%;
         height: 70vh;
@@ -63,7 +65,14 @@
         height: 90%;
     }
     
+    
 }
+
+
+@media (max-width: 1024px) {
+
+}
+
 
 
 @media (max-width: 865px) {
@@ -113,16 +122,33 @@
         height: 70vh;
     }
 
-    
+    img#maior {
+        display: none;
+    }
+
+    img#menor {
+        display: block;
+    }
 
     div.backSexteto > picture > img {
-        width: 90%;
-        height: 90%;
+        width: 95%;
+        height: 95%;
     }
 
 }
 
- @media (max-width: 460px) {
+@media (min-width: 539px) {
+    
+    img#menor {
+        display: none;
+    }
+
+    img#maior {
+        display: initial;
+    }
+}
+
+ @media (max-width: 675px) {
     
     div.retRed{
         width: 40%;
@@ -135,15 +161,17 @@
     }
 
     div.backSexteto {
-        width: 90%;
+        width: 97%;
         height: 60vh;
     }
 
-    
+    #menor {
+        display: initial;
+    }
 
     div.backSexteto > picture > img {
-        width: 90%;
-        height: 90%;
+        width: 95%;
+        height: 95%;
     }
 
 
@@ -204,6 +232,8 @@
 
     .containerPg1 {
         display: flex;
+        width: 100%;
+        height: 100%;
     }
 
 
@@ -216,8 +246,10 @@
         
         
         left: 0;
-        bottom: 6vmax;
+        bottom: 8vmax; 
         position: absolute;
+
+        
 
 
         width: 34vmax;
@@ -236,7 +268,7 @@
 
         z-index: 5;
 
-        bottom: 4vmax;
+        bottom: 6vmax;
         left: 11vmax;
         position: absolute;
 
@@ -286,12 +318,13 @@
     }
 
     .backSexteto {
-    display: flex;
-        width: 54vmax;
+        display: flex;
         
-        /* height: 80vh; */
-        height: 41vmax;
-        /* height: 42vw; */
+        width: 60%;
+        height: 95%;
+        
+        
+       
         
         
         margin-left: auto;
@@ -314,7 +347,7 @@
         
         
         width: 90%; 
-        height: 39vmax; 
+        height: 95%; 
         
         position: absolute; 
         right: 5px; 
@@ -322,7 +355,9 @@
         filter: drop-shadow(var(--sombra));
     }
 
-
+    #menor {
+        display: none;
+    }
 
 
 /* Barra de Navegação */
