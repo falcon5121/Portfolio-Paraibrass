@@ -2,19 +2,17 @@ import React, { useState, useRef } from "react";
 import Menu from "./Menu/Menu";
 import Player from "./Components/Player/Player";
 
+
+
 import SearchIcon from "@mui/icons-material/Search";
 import { ArrowBackIos } from "@mui/icons-material";
 import { ArrowForwardIos } from "@mui/icons-material";
 
-import { Navigation, Pagination} from 'swiper';
-import {Swiper, SwiperSlide} from "swiper/react"
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 
 
 
-import "./Cards/Cards.css";
+
+
 import Card from "./Cards/Cards";
 {
   /* Fotos */
@@ -30,6 +28,14 @@ import menor from "./imagens/menor.png"
 
 import "./index.css";
 import "./Menu/Menu.css";
+import Cards from "./Cards/Cards";
+import CarouselReact from "./carouselReact";
+
+// import CarouselReact from "./carouselReact"
+
+
+
+
 
 export default function () {
   /* Carrossel da Biografia*/
@@ -75,6 +81,11 @@ export default function () {
   const animacao = {
     width: IsShown ? "0" : "10%",
   };
+
+  
+
+
+
 
   return (
     <div className="vetor">
@@ -142,23 +153,11 @@ export default function () {
                 <h1 className="biografia">BIOGRAFIA</h1>
               </div>
             </section>
-              <article className="swiperCards">
-                <Swiper
-                modules={[Navigation, Pagination]}
-                navigation
-                // pagination={{clickable: true}}
-                loop={true}
-                spaceBetween={0}
-                slidesPerView={3}
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}
-                className="swiperCardsItem"
-                >
-                  <SwiperSlide className="item"><Card/></SwiperSlide>
-                  <SwiperSlide className="item"><Card/></SwiperSlide>
-                  <SwiperSlide className="item"><Card/></SwiperSlide>
-                  <SwiperSlide className="item"><Card/></SwiperSlide>
-                </Swiper>
+              <article className="containerReact">
+                
+            
+              <CarouselReact/>
+
               </article>
           </div>
         </article>
@@ -168,9 +167,11 @@ export default function () {
 
           <div className="cardDeVideo">
             <section className="letreiro2">
-              <div className="tinyRetRed2" id="Videos"></div>
+              <div className="tinyRetRed2" id="Videos">
+
               <div className="tinyRetBlack2">
                 <h1 className="biografia">VIDEOS</h1>
+              </div>
               </div>
             </section>
 

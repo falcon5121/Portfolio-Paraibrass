@@ -27,6 +27,10 @@
 
 }
 
+
+html {
+    font-size: 10px;
+}
 @media (min-height: 1368px) {
 
     div.retRed{
@@ -602,9 +606,6 @@ u > a {
     width: 17vmax;
     height: 7vmax;
 
-    
-    
-    
     position: relative;
 
     
@@ -659,9 +660,19 @@ u > a {
 
     
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     
 }
+
+.containerReactCards {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+
 
 /* Configuração das Setas de Navegação */
 
@@ -689,7 +700,7 @@ u > a {
 
 .Card {
 
-    margin: 0 20px;
+    margin: 2vmax 20px;
     position: relative;
 
     /* width: 328px;
@@ -708,7 +719,7 @@ u > a {
 
 .Card img {
 
-    width: 6vmax;
+    width: 30%;
 
     display: flex;
     margin: auto;
@@ -725,23 +736,30 @@ u > a {
     display: flex;
     justify-content: center;
 
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: 10%;
+    margin-right: 10%; */
+    margin-inline: 10%;
     margin-top: 1.8vmax;
 
-    width: 12vmax;
+    /* width: 12vmax; */
 
     border-bottom: solid 3px #201F29;
 
 }
 
-.Card p {
+.caixaTexto {
+    height: 70%;
+    overflow-y: auto;
+}
 
-    font-size: 0.73vmax;
+.Card > div > p {
+
+    font-size: 1.7rem;
     color: #fff;
 
     padding: 0.7vmax 2vmax;
     
+    height: 100%;
 
 }
 
@@ -751,6 +769,23 @@ u > a {
 
     transform: scale(1.05);
 
+}
+
+
+#prev {
+    margin-left: 1vmax;
+}
+
+#next {
+    margin-right: 1vmax;
+}
+
+
+
+.cotainerCards {
+    display: flex;
+    align-items: center;
+    
 }
 
 
@@ -770,13 +805,14 @@ u > a {
 
 .tinyRetRed2{
 
-    width: var(--retRed); 
-    height: 16vmax; 
+    width: 7vmax;
+    height: 12vmax;
 
-
+    top: 0;
     position: absolute;
+    display: flex;
+    align-items: flex-end;
     margin-left: 4vw;
-    
 
     box-shadow: var(--sombra4);
     background-color: var(--third-color);
@@ -787,18 +823,17 @@ u > a {
 
 .tinyRetBlack2{
 
-    width: var(--retBlack); 
-    height: var(--retRed); 
+    height: var(--retRed);
 
-    
-    margin-left: 2vw;
-    position: absolute;
+    position: relative;
+    right: 30%;
+    bottom: 10%;
 
-    
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
+    padding: 1vw;
 
     background-color: var(--primary-color);
     border-radius: var(--bordar2);
@@ -923,34 +958,3 @@ u > a {
     
 }
 
-.swiperCards {
-    align-items: center;
-    margin-block: 20vw;
-    display: flex;
-    margin: auto;
-    width: 50%;
-    background-color: #101010;
-    color: #fff;
-    font-size: 20px;
-    height: 60%;
-}
-
-.item {
-    
-    margin-top: 5vh;
-    
-}
-
-.swiperCardsItem{
-    
-    margin: auto;
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-items: center;
-    align-content: center;
-}
-
-.swiper-button-prev {
-    margin: auto;
-}
