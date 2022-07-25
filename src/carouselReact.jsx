@@ -58,7 +58,7 @@ export default function () {
     
     <article className="containerReactCards">
     
-    <i className="fa-solid fa-angle-left fa-2x" id="prev"/>
+    <i className="fa-solid fa-angle-left fa-2xl" id="prev"/>
     <Swiper
       modules={[Navigation]}
       spaceBetween={0}
@@ -82,7 +82,7 @@ export default function () {
       
       
     </Swiper>
-    <i className="fa-solid fa-angle-right fa-2x" id="next"/>
+    <i className="fa-solid fa-angle-right fa-2xl" id="next"/>
   </article>
     
   )

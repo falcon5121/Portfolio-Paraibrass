@@ -73,8 +73,11 @@ html {
 }
 
 
-@media (max-width: 1024px) {
-
+@media (max-width: 1124px) {
+    div.retBlack {
+        width: 20vmax;
+        height: 34vmax;
+    }
 }
 
 
@@ -139,6 +142,26 @@ html {
         height: 95%;
     }
 
+   
+    article.videosCarousel {
+        display: block;
+    }
+
+    .visible {
+        display: none;
+    }
+
+    article.invisible {
+        display: flex;
+        align-items: center;
+        height: 90px;
+    }
+    i.invisible {
+        display: block;
+        margin: auto;
+    }
+
+
 }
 
 @media (min-width: 539px) {
@@ -183,7 +206,11 @@ html {
 } 
 
 
-   
+   html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+   }
 
 
 /* Novo plano de Fundo */
@@ -197,47 +224,69 @@ html {
 
 
     .background{
+
+        
+        
+        height: 100vh;
         width: 100%;
         z-index: -100;
+
     }
 
 
     .pagina1, .pagina2, .pagina3 {
-        
-        position: absolute;
+
+        scroll-snap-align: start;
+
         display: block;
+
+        position: absolute;
         width: 100%;
         height: 100%;
+
     }
 
     .pagina1{
+        
         display: flex;
         flex-direction: column;
+
     }
 
     .pagina1, .pagina3 {
+
         background-color: var(--primary-color);
+
     }
     
     
 
     .pagina2 {
+        
         top: 100%;
+
         background-color: var(--secondary-color);
+
     }
 
     
     .pagina3 {
+        
         top: 200%;
+
         display: flex;
         flex-direction: column;
+
     }
     /* Plano de Fundo */
 
     .containerPg1 {
+
         display: flex;
+
         width: 100%;
         height: 100%;
+
     }
 
 
@@ -276,8 +325,10 @@ html {
         left: 11vmax;
         position: absolute;
 
-        width: 20vmax;
-        height: 34vmax;
+        /* width: 20vmax;
+        height: 34vmax; */
+        width: 22%;
+        height: 70%;
 
 
         background: var(--secondary-color);
@@ -667,34 +718,15 @@ u > a {
 .containerReactCards {
     display: flex;
     width: 100%;
-    height: 100%;
+    height:70vh;
     align-items: center;
     justify-content: center;
 }
 
 
 
-/* Configuração das Setas de Navegação */
 
 
-.arrow > .setas{
-
-    color: #000;
-
-    transform: scale(2.3);
-
-    cursor: pointer;
-    margin: auto;
-
-    transition:  0.2s; 
-
-}
-
-.arrow > .setas:hover {
-
-     transform: scale(2.6); 
-
-} 
 
 /* Biografica Card */
 
@@ -725,7 +757,7 @@ u > a {
     margin: auto;
     
     position: relative;
-    top: 1vmax;
+    top: 0.5vmax;
 
     border-radius: 50%;
 
@@ -739,7 +771,7 @@ u > a {
     /* margin-left: 10%;
     margin-right: 10%; */
     margin-inline: 10%;
-    margin-top: 1.8vmax;
+    margin-top: 1vmax;
 
     /* width: 12vmax; */
 
@@ -748,7 +780,7 @@ u > a {
 }
 
 .caixaTexto {
-    height: 70%;
+    height: 77%;
     overflow-y: auto;
 }
 
@@ -757,7 +789,7 @@ u > a {
     font-size: 1.7rem;
     color: #fff;
 
-    padding: 0.7vmax 2vmax;
+    padding: 0 2vmax;
     
     height: 100%;
 
@@ -780,7 +812,12 @@ u > a {
     margin-right: 1vmax;
 }
 
-
+.fa-2xl{
+    font-size: 4vmax;
+    filter: drop-shadow(var(--sombra5));
+    transition: all 0.2s;
+    cursor: pointer;
+}
 
 .cotainerCards {
     display: flex;
@@ -788,11 +825,14 @@ u > a {
     
 }
 
+.fa-2xl:hover {
+    font-size: 4.5vmax;
+}
 
 /* Carrossel de Videos */
 
 .letreiro2 {
-    
+    z-index: 100;
     margin: 0 auto;
     width: 15vmax;
     height: 12vmax;
@@ -863,38 +903,6 @@ u > a {
 
 
 
-.centralizado { /* local onde estao as setas e o .videos*/
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-
-}
-
-/* Div das setas */
-
-.centralizado > .videoSeta {
-
-    color: #fff;
-    margin: auto 10%;
-
-    
-    cursor: pointer;
-    transform: scale(2.3);
-
-    transition: 0.2s;
-    filter: drop-shadow(var(--sombra5));
-
-}
-
-
-.centralizado > .videoSeta:hover{
-
-    transform: scale(3);
-
-}
-
 .videos { /* Div com o local onde esta armazenado os videos*/
 
     display: flex;
@@ -958,3 +966,45 @@ u > a {
     
 }
 
+.videoSlide {
+    display: flex;
+    /* width: 1200px;
+    height: 700px; */
+
+}
+
+.containerVideos2 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.videosCarousel {
+   
+    width: 80%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+.antes, .proximo {
+    color: #fff;
+    margin-inline: 20px;
+}
+
+.testeVideos{
+    width: 90vw;
+    height: 70vh;
+}
+
+.invisible {
+    display: none;
+}
+
+.designMobile {
+    width: 100%;
+}

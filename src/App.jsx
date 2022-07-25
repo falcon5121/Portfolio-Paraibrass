@@ -10,9 +10,6 @@ import { ArrowForwardIos } from "@mui/icons-material";
 
 
 
-
-
-
 import Card from "./Cards/Cards";
 {
   /* Fotos */
@@ -30,6 +27,8 @@ import "./index.css";
 import "./Menu/Menu.css";
 import Cards from "./Cards/Cards";
 import CarouselReact from "./carouselReact";
+import VideosCarousel from "./videosCarousel";
+
 
 // import CarouselReact from "./carouselReact"
 
@@ -38,6 +37,10 @@ import CarouselReact from "./carouselReact";
 
 
 export default function () {
+
+
+
+
   /* Carrossel da Biografia*/
   const carousel = useRef(null);
 
@@ -92,7 +95,7 @@ export default function () {
       {/* Tela Inicial com NavBar */}
 
       <section className="background">
-        <article className="pagina1">
+        <article className="pagina1" id="Home">
           <nav className="navbar">
             <ul className="mobile">
               <li className="logo">
@@ -134,7 +137,7 @@ export default function () {
               <p>João Pessoa - PB</p>
             </div>
 
-            <div className="backSexteto" id="Home">
+            <div className="backSexteto" >
               <picture>
                 <img src={sexteto}  className="imgSexteto" id="maior"/>
                 <img src={ menor } alt="imgSexteto" className="imgSexteto" id="menor"/>
@@ -155,7 +158,6 @@ export default function () {
             </section>
               <article className="containerReact">
                 
-            
               <CarouselReact/>
 
               </article>
@@ -174,27 +176,15 @@ export default function () {
               </div>
               </div>
             </section>
-
-            <div className="centralizado">
-              <ArrowBackIos
-                className="videoSeta"
-                onClick={handleLeftClickVideos}
-              />
-
-              <div className="videos" ref={carouselVideos}>
-                <div className="conainerVideos">
-                  <Player />
-                  <Player />
-                  <Player />
-                </div>
-              </div>
-
-              <ArrowForwardIos
-                className="videoSeta"
-                onClick={handleRightClickVideos}
-              />
-            </div>
+              <section className="containerVideos2">
+                <VideosCarousel/>
+              </section>
             
+             {/* <iframe width="560" height="315" 
+                src="https://www.youtube.com/embed/VfUAKUEeM7g" 
+                title="YouTube video player" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe> */}
           </div>
           <article className="conteudo">
               <h1>Música</h1>
