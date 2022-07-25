@@ -2,6 +2,8 @@ import React, { useState, useRef } from "react";
 import Menu from "./Menu/Menu";
 import Player from "./Components/Player/Player";
 
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 
 
 import SearchIcon from "@mui/icons-material/Search";
@@ -38,6 +40,18 @@ import VideosCarousel from "./videosCarousel";
 
 export default function () {
 
+  const firebaseConfig = {
+    apiKey: "AIzaSyAoL_cFALlSXHPF4vrg0k1FSw_vDLIhUrY",
+    authDomain: "site-paraibrass.firebaseapp.com",
+    projectId: "site-paraibrass",
+    storageBucket: "site-paraibrass.appspot.com",
+    messagingSenderId: "365186144207",
+    appId: "1:365186144207:web:fabd784c1cd6427626a4ba",
+    measurementId: "G-L0M7RFR6KT"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
 
 
 

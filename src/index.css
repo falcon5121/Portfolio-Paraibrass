@@ -147,6 +147,16 @@ html {
         display: block;
     }
 
+
+    div.cardDeVideo {
+         height: auto;
+    }
+
+
+    iframe.testeVideos{
+        height: 50vh
+    }
+
     .visible {
         display: none;
     }
@@ -201,8 +211,12 @@ html {
         height: 95%;
     }
 
-
+    iframe.testeVideos{
+        height: 30vh
+    }
     
+
+
 } 
 
 
@@ -835,7 +849,7 @@ u > a {
     z-index: 100;
     margin: 0 auto;
     width: 15vmax;
-    height: 12vmax;
+    /* height: 8vmax; */
     
     display: flex;
     align-items: center;
@@ -890,7 +904,7 @@ u > a {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2vw auto;
+    margin: 1vw auto 0 auto;
     
     background-color: var(--secondary-color);
     border-radius: var(--borda);
@@ -934,11 +948,15 @@ u > a {
 .conteudo{
 
     margin: auto;
+   
     
     border-radius: var(--borda);
 
-    width: 52vw;
-    height: 22vh;
+    
+    /* width: 52vw; */
+    width: 60%;
+    /* height: 22vh; */
+    
 
     background-color: #fff;
     box-shadow: var(--sombra3);
@@ -951,7 +969,7 @@ u > a {
     font-weight: 700;
 
     margin: auto;
-    font-size: 3vmax;
+    font-size: 2vmax;
 
     text-align: center;
 
@@ -961,8 +979,8 @@ u > a {
 
     text-align: center;
     
-    font-size: 1.7vmax;
-    font-weight: 500;
+    font-size: 1.6vmax;
+    /* font-weight: 500; */
     
 }
 
@@ -997,6 +1015,7 @@ u > a {
 }
 
 .testeVideos{
+    
     width: 90vw;
     height: 70vh;
 }

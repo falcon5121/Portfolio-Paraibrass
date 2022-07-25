@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "'/home/emanuel/Documents/Programação/Portfolio-Paraibrass/Portfolio-Paraibrass' ",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
