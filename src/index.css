@@ -142,18 +142,19 @@ html {
         height: 95%;
     }
 
-   
     article.videosCarousel {
         display: block;
     }
 
 
     div.cardDeVideo {
-         height: auto;
+        margin-top: 10vw ;
+        height: auto;
     }
 
 
     iframe.testeVideos{
+        margin-top: 3vmax;
         height: 50vh
     }
 
@@ -164,14 +165,14 @@ html {
     article.invisible {
         display: flex;
         align-items: center;
-        height: 90px;
+        height: 60px;
     }
     i.invisible {
         display: block;
         margin: auto;
     }
 
-
+    
 }
 
 @media (min-width: 539px) {
@@ -183,6 +184,9 @@ html {
     img#maior {
         display: initial;
     }
+
+     
+
 }
 
  @media (max-width: 675px) {
@@ -212,12 +216,49 @@ html {
     }
 
     iframe.testeVideos{
-        height: 30vh
+        height: 40vh
     }
     
+    div.cardDeVideo {
+        margin-top: 15vw;
+        height: auto;
+    }
+
+
+
+    article.conteudo > h1 {
+        font-size: 3vmax;
+    }
+
+    article.conteudo > h3 {
+        font-size: 2vmax;
+    }
+
 
 
 } 
+
+@media (max-width: 393px) {
+
+    iframe.testeVideos{
+        height: 30vh
+    }
+    
+    div.cardDeVideo {
+        margin-top: 26vw;
+        height: auto;
+    }
+
+
+    article.conteudo > h1 {
+        font-size: 2.5vmax;
+    }
+
+    article.conteudo > h3 {
+        font-size: 1.7vmax;
+    }
+
+}
 
 
    html {
@@ -955,7 +996,9 @@ u > a {
     
     /* width: 52vw; */
     width: 60%;
-    /* height: 22vh; */
+    height: 17vh;
+    
+
     
 
     background-color: #fff;
@@ -968,10 +1011,11 @@ u > a {
 
     font-weight: 700;
 
-    margin: auto;
     font-size: 2vmax;
 
     text-align: center;
+
+    margin-block: 0.5vmax;
 
 }
 
@@ -979,7 +1023,7 @@ u > a {
 
     text-align: center;
     
-    font-size: 1.6vmax;
+    font-size: 1.3vmax;
     /* font-weight: 500; */
     
 }
