@@ -28,9 +28,7 @@
 }
 
 
-html {
-    font-size: 10px;
-}
+
 @media (min-height: 1368px) {
 
     div.retRed{
@@ -262,9 +260,10 @@ html {
 
 
    html {
-    /* scroll-behavior: smooth;
-    scroll-snap-type: y mandatory; */
-    /* overflow-y: scroll; */
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    font-size: 10px;
    }
 
 
@@ -291,7 +290,7 @@ html {
 
     .pagina1, .pagina2, .pagina3 {
 
-        /* scroll-snap-align: start; */
+        scroll-snap-align: start;
 
         display: block;
 
