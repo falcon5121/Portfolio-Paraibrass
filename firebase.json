@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "'/home/emanuel/Documents/Programação/Portfolio-Paraibrass/Portfolio-Paraibrass' ",
+    "public": "build",
     "ignore": [
       "firebase.json",
       "**/.*",

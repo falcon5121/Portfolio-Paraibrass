@@ -12,7 +12,7 @@ import { Navigation } from 'swiper';
 
 
 
-export default function () {
+export default React.memo(function () {
     
     
     
@@ -55,12 +55,11 @@ export default function () {
         }
 
 
-        
-        // <iframe width="560" height="315" 
-    // src="https://www.youtube.com/embed/VfUAKUEeM7g" 
-    // title="YouTube video player" frameborder="0" 
-    // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-    // allowfullscreen></iframe>
+        // <iframe width="560" height="315"
+        // src="https://www.youtube.com/embed/VfUAKUEeM7g" 
+        // title="YouTube video player" frameborder="0" 
+        // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        // allowfullscreen></iframe>
 
 
 
@@ -106,4 +105,4 @@ export default function () {
 
         </article>
     )
-}
+})

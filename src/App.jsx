@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import Menu from "./Menu/Menu";
-import Player from "./Components/Player/Player";
+
 
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
@@ -10,9 +10,6 @@ import SearchIcon from "@mui/icons-material/Search";
 import { ArrowBackIos } from "@mui/icons-material";
 import { ArrowForwardIos } from "@mui/icons-material";
 
-
-
-import Card from "./Cards/Cards";
 {
   /* Fotos */
 }
@@ -27,12 +24,9 @@ import menor from "./imagens/menor.png"
 
 import "./index.css";
 import "./Menu/Menu.css";
-import Cards from "./Cards/Cards";
 import CarouselReact from "./carouselReact";
 import VideosCarousel from "./videosCarousel";
 
-
-// import CarouselReact from "./carouselReact"
 
 
 
@@ -55,30 +49,6 @@ export default function () {
 
 
 
-  /* Carrossel da Biografia*/
-  const carousel = useRef(null);
-
-  const handleLeftClick = (e) => {
-    carousel.current.scrollLeft -= carousel.current.offsetWidth;
-  };
-
-  const handleRightClick = (e) => {
-    console.log(carousel.current.offsetWidth);
-    carousel.current.scrollLeft += carousel.current.offsetWidth;
-  };
-
-  /* Carrossel de Videos*/
-
-  const carouselVideos = useRef(null);
-
-  const handleLeftClickVideos = (e) => {
-    carouselVideos.current.scrollLeft -= carouselVideos.current.offsetWidth;
-  };
-
-  const handleRightClickVideos = (e) => {
-    console.log(carouselVideos.current.offsetWidth);
-    carouselVideos.current.scrollLeft += carouselVideos.current.offsetWidth;
-  };
 
   const HandleClick = () => {
     SetIsShown((current) => !current);
@@ -138,7 +108,7 @@ export default function () {
                 <SearchIcon className="search" />
               </li>
               <li onClick={HandleClick} className="cima">
-                <Menu />
+                <Menu /> 
               </li>
             </ul>
           </nav>
@@ -153,8 +123,8 @@ export default function () {
 
             <div className="backSexteto" >
               <picture>
-                <img src={sexteto}  className="imgSexteto" id="maior"/>
-                <img src={ menor } alt="imgSexteto" className="imgSexteto" id="menor"/>
+                <source srcSet={sexteto}  className="imgSexteto" media="(min-width: 865px)" />
+                <img src={ menor } alt="imgSexteto" className="imgSexteto" />
               </picture>
             </div>
           </section>
@@ -194,11 +164,6 @@ export default function () {
                 <VideosCarousel/>
               </section>
             
-             {/* <iframe width="560" height="315" 
-                src="https://www.youtube.com/embed/VfUAKUEeM7g" 
-                title="YouTube video player" frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen></iframe> */}
           </div>
           <article className="conteudo">
               <h1>Música</h1>
@@ -237,7 +202,7 @@ export default function () {
               Paraibrass
             </a>
           </u>
-        </div>
+        </div> 
       </section>
     </div>
   );

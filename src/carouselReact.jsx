@@ -8,7 +8,7 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import { Navigation } from 'swiper';
 
 
-export default function () {
+export default React.memo(function () {
   const data = {
     cards: [
       {
@@ -86,4 +86,4 @@ export default function () {
   </article>
     
   )
-}
+})
