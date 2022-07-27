@@ -7,43 +7,31 @@ import 'swiper/css/pagination';
 import {Swiper, SwiperSlide} from "swiper/react";
 import { Navigation } from 'swiper';
 
+import { useQuery, gql } from '@apollo/client';
+
+const SextetoData = gql`
+query DadosSexteto {
+  componenteSexteto {
+    ident
+    nome
+    urlImg
+    curtaBiografia
+    biografiaTexto {
+      text
+    }
+  }
+}
+`
+
+
 
 export default React.memo(function () {
-  const data = {
-    cards: [
-      {
-        id: 1,
-        imagem: "https://github.com/falcon5121.png",
-        texto:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. At velit, reiciendis alias iure sint aliquam quibusdam, ex mollitia totam cum error. Doloribus debitis dolorem perferendis. Dolor consequuntur quia molestiae esse!",
-      },
-      {
-        id: 2,
-        imagem: "https://github.com/falcon5121.png",
-        texto: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae officia dolore vero animi. Neque veritatis culpa dignissimos et? Iure voluptas quidem molestias commodi sit ut illum magnam. Enim, temporibus mollitia!",
-      },
-      {
-        id: 3,
-        imagem: "https://github.com/falcon5121.png",
-        texto: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae officia dolore vero animi. Neque veritatis culpa dignissimos et? Iure voluptas quidem molestias commodi sit ut illum magnam. Enim, temporibus mollitia!",
-      },
-      {
-        id: 4,
-        imagem: "https://github.com/falcon5121.png",
-        texto: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae officia dolore vero animi. Neque veritatis culpa dignissimos et? Iure voluptas quidem molestias commodi sit ut illum magnam. Enim, temporibus mollitia!",
-      },
-      {
-        id: 5,
-        imagem: "https://github.com/falcon5121.png",
-        texto: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae officia dolore vero animi. Neque veritatis culpa dignissimos et? Iure voluptas quidem molestias commodi sit ut illum magnam. Enim, temporibus mollitia!",
-      },
-      {
-        id: 6,
-        imagem: "https://github.com/falcon5121.png",
-        texto: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae officia dolore vero animi. Neque veritatis culpa dignissimos et? Iure voluptas quidem molestias commodi sit ut illum magnam. Enim, temporibus mollitia!",
-      },
-    ],
-  };
+
+  const { loading , error , data} = useQuery(SextetoData)
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error</p>;
+
 
 
 
@@ -60,23 +48,23 @@ export default React.memo(function () {
     
     <i className="fa-solid fa-angle-left fa-2xl" id="prev"/>
     <Swiper
+      className="caixaMobile"
       modules={[Navigation]}
       spaceBetween={0}
       pagination
+      initialSlide={0}
       slidesPerView={1}
       navigation={{ nextEl: "#next", prevEl: "#prev"}}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
       centeredSlides={true}
       centeredSlidesBounds={true}
       loop={true}
-      breakpoints={{[758]:{spaceBetween:0, slidesPerView: 3, loop: true}}}
+      breakpoints={{[758]:{ initialSlide:1 ,spaceBetween:0, slidesPerView: 3,}}}
 
     >
-      {data.cards.map(user => (
-        <SwiperSlide key={user.id} className="slide" 
+      {data.componenteSexteto.map(user => (
+        <SwiperSlide key={user.ident} className="slide" 
         >
-          <Card texto={user.texto} imagem={user.imagem}/>
+          <Card texto={user.curtaBiografia} imagem={user.urlImg}/>
         </SwiperSlide>
       ))}
       

@@ -165,15 +165,7 @@ export default function () {
               </section>
             
           </div>
-          <article className="conteudo">
-              <h1>Música</h1>
-              <h3>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
-                dolores odit minima est nostrum. Animi adipisci aliquam eveniet
-                fuga, atque non suscipit quam assumenda ipsa rem unde, eos
-                sequi! Quidem.
-              </h3>
-            </article>
+          
         </article>
 
         {/* Parte Mobile da Pagina */}

@@ -39,7 +39,6 @@
         z-index: 1;
     }
 
-
     .tela{
         display: none;
     }
@@ -54,9 +53,7 @@
         display: block;
         z-index: 10;
     }
-
     
-
     div.backSexteto {
         width: 95%;
         height: 70vh;
@@ -70,11 +67,24 @@
     
 }
 
+@media (max-width: 1365px) {
+    div.Card {
+        width: 20vmax;
+        height: 34vmax;
+    }
+}
+
+
 
 @media (max-width: 1124px) {
     div.retBlack {
         width: 20vmax;
         height: 34vmax;
+    }
+
+    div.Card {
+        width: 19vmax;
+        height: 32vmax;
     }
 }
 
@@ -127,18 +137,18 @@
         height: 70vh;
     }
 
-    img#maior {
-        display: none;
-    }
 
-    img#menor {
-        display: block;
-    }
 
     div.backSexteto > picture > img {
         width: 95%;
         height: 95%;
     }
+
+    div.Card {
+        width: 25vmax;
+        height: 40vmax;
+    }
+
 
     article.videosCarousel {
         display: block;
@@ -163,11 +173,13 @@
     article.invisible {
         display: flex;
         align-items: center;
-        height: 60px;
+        height: 70px;
+        
     }
     i.invisible {
-        display: block;
+        display: flex;
         margin: auto;
+        /* height: 30px; */
     }
 
     
@@ -763,7 +775,8 @@ u > a {
 
 .Cards {
 
-    
+    height:100%;
+    align-items: center;
     display: flex;
     justify-content: center;
     
@@ -792,8 +805,8 @@ u > a {
     /* width: 328px;
     height: 490px; */
 
-    width: 15vmax;
-    height: 25vmax;
+    width: 18vmax;
+    height: 28vmax;
 
     border-radius: 1.875rem;
     transition: transform 0.2s;
@@ -939,7 +952,7 @@ u > a {
 .cardDeVideo{ /* Card de tras dos videos*/
 
     width: 90vw;
-    height: 80vh;
+    height: 95vh;
     
     display: flex;
     justify-content: center;
@@ -957,44 +970,18 @@ u > a {
 
 
 
-.videos { /* Div com o local onde esta armazenado os videos*/
-
-    display: flex;
-    
-    
-    overflow: hidden;
-    
-    width: 50vw;
-    height: 50vh;
-
-}
-
-.conainerVideos{ /* Onde os Videos estão armazenados*/
-
-    display: flex;
-
-}
-
- .player-video{ /* tamanho dos videos*/
-
-    display: flex;
-
-    width: 50vw;
-    height: 50vh;
-
-}
-
-
 .conteudo{
 
-    margin: auto;
+    /* margin: auto; */
+
+    margin-bottom: 10px;
    
     
     border-radius: var(--borda);
-
+    margin-inline: auto;
     
     /* width: 52vw; */
-    width: 60%;
+    width: 90%;
     height: 17vh;
     
 
@@ -1029,8 +1016,7 @@ u > a {
 
 .videoSlide {
     display: flex;
-    /* width: 1200px;
-    height: 700px; */
+    /* width: 1200px; */
 
 }
 
@@ -1044,11 +1030,17 @@ u > a {
 .videosCarousel {
    
     width: 80%;
+    /* height: 90%; */
     
     display: flex;
     align-items: center;
     justify-content: center;
     
+}
+
+.videoLegenda {
+    width: 100%;
+    height: auto;
 }
 
 
@@ -1059,7 +1051,7 @@ u > a {
 
 .testeVideos{
     
-    width: 90vw;
+    width: 100%;
     height: 70vh;
 }
 
@@ -1069,4 +1061,13 @@ u > a {
 
 .designMobile {
     width: 100%;
+}
+
+.caixaMobile {
+    height: 100%;
+}
+
+.videosContainer {
+    
+    width: 90%;
 }
