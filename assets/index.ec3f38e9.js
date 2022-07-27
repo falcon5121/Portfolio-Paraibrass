@@ -777,7 +777,7 @@ query DadosSexteto {
     }
   }
 }
-`;var dN=It.memo(function(){const{loading:e,error:t,data:n}=Y0(fN);return e?A("p",{children:"Loading..."}):t?A("p",{children:"Error"}):oe("article",{className:"containerReactCards",children:[A("i",{className:"fa-solid fa-angle-left fa-2xl",id:"prev"}),A(zf,{modules:[Uy],spaceBetween:0,pagination:!0,initialSlide:0,slidesPerView:1,navigation:{nextEl:"#next",prevEl:"#prev"},centeredSlides:!0,centeredSlidesBounds:!0,loop:!0,breakpoints:{[758]:{initialSlide:1,spaceBetween:0,slidesPerView:3}},children:n.componenteSexteto.map(r=>A($f,{className:"slide",children:A($T,{texto:r.curtaBiografia,imagem:r.urlImg})},r.ident))}),A("i",{className:"fa-solid fa-angle-right fa-2xl",id:"next"})]})});const pN=Cn`
+`;var dN=It.memo(function(){const{loading:e,error:t,data:n}=Y0(fN);return e?A("p",{children:"Loading..."}):t?A("p",{children:"Error"}):oe("article",{className:"containerReactCards",children:[A("i",{className:"fa-solid fa-angle-left fa-2xl",id:"prev"}),A(zf,{className:"caixaMobile",modules:[Uy],spaceBetween:0,pagination:!0,initialSlide:0,slidesPerView:1,navigation:{nextEl:"#next",prevEl:"#prev"},centeredSlides:!0,centeredSlidesBounds:!0,loop:!0,breakpoints:{[758]:{initialSlide:1,spaceBetween:0,slidesPerView:3}},children:n.componenteSexteto.map(r=>A($f,{className:"slide",children:A($T,{texto:r.curtaBiografia,imagem:r.urlImg})},r.ident))}),A("i",{className:"fa-solid fa-angle-right fa-2xl",id:"next"})]})});const pN=Cn`
 query DadosSexteto {
     videosYoutubes {
         ident
