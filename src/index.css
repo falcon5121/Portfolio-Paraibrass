@@ -13,13 +13,15 @@
     --third-color: #CE312A;
     --forth-color: #fff;
 
-    --borda: 2vw;
-    --sombra: -20px 20px 0px rgba(0, 0, 0, 0.26);
-    --sombra2: 20px 20px 0px rgba(0, 0, 0, 0.26);
-    --sombra3: 10px 10px 0px rgba(0, 0, 0, 0.473);
-    --sombra4: 8px 8px 0px rgba(0, 0, 0, 0.466);
-    --sombra5: 3px 1px 0 rgba(0, 0, 0, 0.534);
     --bordar2: 1vw;
+    --borda: 2vw;
+
+    --sombra: -10px 10px 0px rgba(0, 0, 0, 0.26);
+    --sombra2: 10px 10px 0px rgba(0, 0, 0, 0.26);
+    --sombra3: 10px 10px 0px rgba(0, 0, 0, 0.473);
+    --sombra4: 5px 5px 0px rgba(0, 0, 0, 0.466);
+    --sombra5: 3px 1px 0 rgba(0, 0, 0, 0.534);
+    
 
     --retRed: 7vmax;
     --retBlack: 13vmax;
@@ -902,7 +904,7 @@ u > a {
     z-index: 100;
     margin: 0 auto;
     width: 15vmax;
-    /* height: 8vmax; */
+    height: 8vmax;
     
     display: flex;
     align-items: center;
@@ -913,7 +915,7 @@ u > a {
 .tinyRetRed2{
 
     width: 7vmax;
-    height: 12vmax;
+    height: 9vmax;
 
     top: 0;
     position: absolute;
