@@ -17,7 +17,7 @@ import { ArrowForwardIos } from "@mui/icons-material";
 import logo from "./imagens/Paraibrass_logo.svg";
 import sexteto from "./imagens/FIMUS.png";
 import menor from "./imagens/menor.png"
-
+import Sexteto2 from "./imagens/Foto Paraibrass 6.png"
 {
   /* Arquivos CSS */
 }
@@ -97,10 +97,10 @@ export default function () {
                 <a href="#Videos">Videos</a>
               </li>
               <li className="tela">
-                <a>Contact</a>
+                <a href="#Sobre">About</a>
               </li>
               <li className="tela">
-                <a>About</a>
+                <a href="#Contact">Contact</a>
               </li>
 
               <li className="tela space"></li>
@@ -108,7 +108,7 @@ export default function () {
                 <SearchIcon className="search" />
               </li>
               <li onClick={HandleClick} className="cima">
-                <Menu /> 
+                <Menu />
               </li>
             </ul>
           </nav>
@@ -121,10 +121,14 @@ export default function () {
               <p>João Pessoa - PB</p>
             </div>
 
-            <div className="backSexteto" >
+            <div className="backSexteto">
               <picture>
-                <source srcSet={sexteto}  className="imgSexteto" media="(min-width: 865px)" />
-                <img src={ menor } alt="imgSexteto" className="imgSexteto" />
+                <source
+                  srcSet={sexteto}
+                  className="imgSexteto"
+                  media="(min-width: 865px)"
+                />
+                <img src={menor} alt="imgSexteto" className="imgSexteto" />
               </picture>
             </div>
           </section>
@@ -140,11 +144,9 @@ export default function () {
                 <h1 className="biografia">BIOGRAFIA</h1>
               </div>
             </section>
-              <article className="containerReact">
-                
-              <CarouselReact/>
-
-              </article>
+            <article className="containerReact">
+              <CarouselReact />
+            </article>
           </div>
         </article>
 
@@ -154,20 +156,91 @@ export default function () {
           <div className="cardDeVideo">
             <section className="letreiro2">
               <div className="tinyRetRed2" id="Videos">
-
-              <div className="tinyRetBlack2">
-                <h1 className="biografia">VIDEOS</h1>
-              </div>
+                <div className="tinyRetBlack2">
+                  <h1 className="biografia">VIDEOS</h1>
+                </div>
               </div>
             </section>
-              <section className="containerVideos2">
-                <VideosCarousel/>
-              </section>
-            
+            <section className="containerVideos2">
+              <VideosCarousel />
+            </section>
           </div>
-          
         </article>
 
+        <article className="pagina4" id="Sobre">
+          <section className="inBox">
+            <div className="primeiraParte">
+            <article className="imgLabel">
+              <picture className="imgSobre">
+                <source media="(min-width: 865px)" srcset={Sexteto2} />
+                <img src={Sexteto2} alt="" />
+              </picture>
+            </article>
+              <div className="letreiro3">
+                <span className="textoLetreiro3">SEXTETO PARAÍBRASS</span>
+              </div>
+
+            </div>
+            <article className="text">
+              <h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellendus ea quo eaque ullam, tenetur laborum, pariatur
+                necessitatibus obcaecati non beatae rem deleniti quam, dolor eos
+                labore eius nemo similique fugit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellendus ea quo eaque ullam, tenetur laborum, pariatur
+                necessitatibus obcaecati non beatae rem deleniti quam, dolor eos
+                labore eius nemo similique fugit.
+              </h3>
+              <div>
+              <img src={logo} alt="Logo do Paraibrass" />
+              </div>
+            </article>
+          </section>
+        </article>
+
+        <article className="pagina5" id="Contact">
+          <div className="form">
+          <input type="text" placeholder="Nome"/>
+          <input type="text" placeholder="Telefone"/>
+          <input type="text" placeholder="Assunto"/>
+          {/* <input type="text" placeholder="Descrição" row="10" cols=""/> */}
+          <textarea id="Descrição" cols="10" rows="5" placeholder="Descrição"></textarea>
+          <div className="buttonSubmit"><span>Enviar</span></div>
+          </div>
+
+          <article className="contactAbout">
+          <div className="contactUs"><h1>FALE CONOSCO</h1></div>
+
+          <div className="contactUs2">
+            <h3>Por favor utilize o formulário ao lado para deixar sua mensagem e tirar dúvidas.</h3>
+          </div>
+          </article>
+
+          
+        </article>
+        <article className="pagina6">
+        <section className="redes">
+          <ul>
+            <li>Twitter</li>
+            <li>Instagram</li>
+            <li>Youtube</li>
+          </ul>
+        </section>
+
+          
+          <section className="final">
+              <div className="divisao1">
+              <h3>“A música é a arte perfeita que exprime os sentimentos dos seres imperfeitos.”</h3>
+              </div>
+              <div className="divisao2">
+              <h3>paraibrass@gmail.com</h3>
+              <h3>ParaíBrass</h3>
+              </div>
+          </section>
+          
+          
+            <section className="logoWhite">LOGO EM BRANCO</section>
+        </article>
         {/* Parte Mobile da Pagina */}
 
         <div className="menuMobile" style={Invisible}>
@@ -194,7 +267,7 @@ export default function () {
               Paraibrass
             </a>
           </u>
-        </div> 
+        </div>
       </section>
     </div>
   );
