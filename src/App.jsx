@@ -18,6 +18,8 @@ import logo from "./imagens/Paraibrass_logo.svg";
 import sexteto from "./imagens/FIMUS.png";
 import menor from "./imagens/menor.png"
 import Sexteto2 from "./imagens/Foto Paraibrass 6.png"
+import SextetoMedio from "./imagens/SextetoMedio.png"
+import SextetoMenor from "./imagens/SextetoMenor.png"
 {
   /* Arquivos CSS */
 }
@@ -169,11 +171,15 @@ export default function () {
 
         <article className="pagina4" id="Sobre">
           <section className="inBox">
+            <div className="letreiro4">
+                <span className="textoLetreiro3">SEXTETO PARAÍBRASS</span>
+              </div>
             <div className="primeiraParte">
             <article className="imgLabel">
               <picture className="imgSobre">
-                <source media="(min-width: 865px)" srcset={Sexteto2} />
-                <img src={Sexteto2} alt="" />
+                <source media="(max-width: 1365px, min-width: 866px)" srcset={ SextetoMedio } />
+                <source media="(max-width: 865px)" srcset={ SextetoMenor } />
+                <img src={ Sexteto2 } alt="" />
               </picture>
             </article>
               <div className="letreiro3">

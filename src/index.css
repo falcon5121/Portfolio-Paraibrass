@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
 
 * {
-    scroll-behavior: smooth;
+    
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -74,6 +74,11 @@
         width: 20vmax;
         height: 34vmax;
     }
+
+    article.text > h3 {
+        font-size: 2vw;
+    }
+
 }
 
 
@@ -87,6 +92,15 @@
     div.Card {
         width: 19vmax;
         height: 32vmax;
+    }
+
+    article.text > h3 {
+        font-size: 2.3vw;
+    }
+
+
+    div.contactUs2 > h3 {
+        font-size: 3.4vw;
     }
 }
 
@@ -188,8 +202,28 @@
         /* height: 30px; */
     }
 
-    
+    article.text > h3 {
+        font-size: 2.5vw;
+    }
+
+
+    div.contactUs2 > h3 {
+        /* font-size: 4vw; */
+        font-size: 3.5rem;
+    }
+
+    .pagina6 section.redes > ul > li {
+        font-size: 2rem;
+    }
+
+    .pagina6 section.final > .divisao2, .final> .divisao1> h3 {
+        font-size: 1.7rem;
+    }
+
 }
+
+
+
 
 @media (min-width: 539px) {
     
@@ -204,6 +238,7 @@
      
 
 }
+
 
  @media (max-width: 675px) {
     
@@ -250,9 +285,143 @@
         font-size: 2vmax;
     }
 
+    section.inBox {
+        flex-direction: column;
+        align-items: center;
+        justify-content: unset;
+    }
+
+        .inBox > .letreiro4 {
+            display: flex;
+            position: relative;
+            margin-bottom: 2vw;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        div.letreiro4 > span {
+            font-size: 5vw;
+        }
 
 
+
+
+    div.primeiraParte {
+        width: 80%;
+        height: 40%;
+    }
+
+    .primeiraParte > .imgLabel {
+        width: 100%;
+        height: 100%;
+    }
+
+    .primeiraParte > .imgLabel > picture > img {
+        object-position: 0 0vw;
+    }
+
+    .primeiraParte > .letreiro3 {
+        display: none;
+        
+    }
+
+    .inBox > .text {
+        
+        margin-top: 5%;
+        width: 80%;
+        height: auto;
+    }
+
+    .inBox > .text > h3 {
+        text-align: justify;
+        font-size: 2.4vmax;
+        padding-inline: 3vw;
+    }
+
+
+    .text > div {
+        margin-inline: auto;
+        width: 80px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .text > div > img {
+        transform: scale(0.8);
+        margin-top: 2vw;
+    }
+
+    div.contactUs2 > h3{
+        
+        font-size: 2.5rem;
+        
+    }
+
+/*
+    .pagina5 {
+        flex-direction: column;
+        justify-content: center;
+    }*/
+
+    .pagina5 > div.form {
+        width: 50%;
+    } 
+
+
+
+
+    .form > div.buttonSubmit > span {
+
+        font-size: 2.3rem;
+    }
 } 
+
+
+@media (max-width: 550px) {
+
+    .pagina5 {
+        flex-direction: column;
+    }
+
+    .pagina5 > div.form {
+        order: 1;
+    }
+
+    article.contactAbout {
+        height:10%;
+    }
+
+    .pagina5 > div.form {
+        width: 80%;
+    }
+
+
+    div.contactUs {
+        height: 100%;
+    }
+
+    div.contactUs2 {
+        
+        display: none;
+        
+    }
+
+    div.form > input::placeholder, div.form >  textarea::placeholder {
+        font-size: 1.5rem;
+    }
+
+    div.form > input, div.form > textarea {
+        font-size: 1.5rem;
+    }
+
+
+    .form > div.buttonSubmit > span {
+        font-size: 2.3rem;
+    }
+    
+}
 
 @media (max-width: 393px) {
 
@@ -272,6 +441,17 @@
 
     article.conteudo > h3 {
         font-size: 1.7vmax;
+    }
+
+   
+    div.contactUs2 {
+        display: none;
+    }
+
+    div.buttonSubmit {
+        margin-block: 2vw;
+        height: 11vw;
+        width: 23vw;
     }
 
 }
@@ -1084,7 +1264,7 @@ u > a {
     width: 98%;
     height: 90%;
     display: flex;
-    align-items: flex-start;
+    align-items:flex-start;
     justify-content: center;
 
 }
@@ -1108,7 +1288,7 @@ u > a {
     width: 96%;
     height: 95%;
     object-fit: cover;
-    object-position: 0 0.01vw ;
+    object-position: 0 0.01vw 1vw;
     border-radius: var(--bordar2);
     margin-left: .5vw;
     margin-top: .5vw;
@@ -1116,7 +1296,7 @@ u > a {
 
 }
 
-.letreiro3 {
+.letreiro3, .letreiro4 {
     width: 60%;
     height: 10%;
     display: flex;
@@ -1134,7 +1314,13 @@ u > a {
     
 }
 
-.letreiro3 > span {
+.letreiro4 {
+    
+    display: none;
+    margin-top: 0;
+}
+
+.letreiro3 > span , .letreiro4 > span {
     font-weight: 900;
     font-size: 3.6vw;
     text-shadow: var(--sombra4);
@@ -1142,26 +1328,31 @@ u > a {
 }
 
 .text {
-    margin-left: 2vw;
+    margin-left: 2.4vw;
     background-color: #fff;
     width: 30%;
     height: 95%;
     border-radius: var(--bordar2);
     display: flex;
     text-align: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
 
     box-shadow: var(--sombra3);
 }
 
 .text > h3 {
+
     text-align: start;
+    padding-top: 1.5vw;
     padding-inline: 1.5vw;
     font-size: 1.5vmax;
     font-weight: 300;
 }
 
+.text > div > img {
+    padding-bottom: 5vw;
+}
 /* ==================================== PAGINA 5 ======================= */
 
 .pagina5 {
@@ -1182,7 +1373,7 @@ u > a {
 .form > input, textarea{
     margin-left: 8%;
     margin-top: 6%;
-    width: 70%;
+    width: 80%;
     height: 10%;
     border-radius: 0.8vw;
     border:  0px ;
@@ -1192,7 +1383,7 @@ u > a {
 }
 
 .form > textarea {
-    height: auto;
+    height: 50%;
 }
 
 .form > input:focus, textarea:focus {
@@ -1210,7 +1401,7 @@ u > a {
 
 .buttonSubmit{
     margin-left: auto;
-    margin-block: auto;
+    margin-block: 1vw;
     margin-right: 2vw;
     border-radius: var(--bordar2);
     width: 25%;
@@ -1296,7 +1487,7 @@ u > a {
     scroll-snap-align: center ;
     color: #fff;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     font-size: 1vw;
 }
 
@@ -1320,7 +1511,7 @@ u > a {
 .final > .divisao1 {
     display: flex;
     text-align: center;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
     height: 50%;
 }
