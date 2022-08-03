@@ -7,8 +7,6 @@ import { getAnalytics } from "firebase/analytics";
 
 
 import SearchIcon from "@mui/icons-material/Search";
-import { ArrowBackIos } from "@mui/icons-material";
-import { ArrowForwardIos } from "@mui/icons-material";
 
 {
   /* Fotos */
@@ -28,6 +26,8 @@ import "./index.css";
 import "./Menu/Menu.css";
 import CarouselReact from "./carouselReact";
 import VideosCarousel from "./videosCarousel";
+import styled from "styled-components";
+
 
 
 
@@ -50,7 +50,23 @@ export default function () {
   const analytics = getAnalytics(app);
 
 
+  const toTop = () => {
+    window.scroll(0,0)
+  }
 
+  
+  
+  addEventListener("scroll", () => {
+    const button = document.querySelector(".goToTop")
+    if(window.scrollY !== 0) {
+      button.style.display = "flex"
+    } else {
+      button.style.display = "none"
+    }
+  })
+
+  
+ 
 
   const HandleClick = () => {
     SetIsShown((current) => !current);
@@ -58,6 +74,7 @@ export default function () {
   };
 
   const [IsShown, SetIsShown] = useState(true);
+  
 
   const tela = document.querySelector(".scroll");
 
@@ -71,16 +88,23 @@ export default function () {
     width: IsShown ? "0" : "10%",
   };
 
+  const position = {
+    position: IsShown ? "unset" : "fixed"
+  }
+    
+  const A = styled.a`
+    color: #fff;
+    text-decoration: none;
+  `
+
   
-
-
-
-
+  
   return (
     <div className="vetor">
       {/* Tela Inicial com NavBar */}
 
-      <section className="background">
+      <section className="background" style={position}>
+        
         <article className="pagina1" id="Home">
           <nav className="navbar">
             <ul className="mobile">
@@ -177,8 +201,8 @@ export default function () {
             <div className="primeiraParte">
             <article className="imgLabel">
               <picture className="imgSobre">
-                <source media="(max-width: 1365px, min-width: 866px)" srcset={ SextetoMedio } />
-                <source media="(max-width: 865px)" srcset={ SextetoMenor } />
+                <source media="(max-width: 1365px, min-width: 866px)" srcSet={ SextetoMedio } />
+                <source media="(max-width: 865px)" srcSet={ SextetoMenor } />
                 <img src={ Sexteto2 } alt="" />
               </picture>
             </article>
@@ -252,19 +276,19 @@ export default function () {
         <div className="menuMobile" style={Invisible}>
           <ul className="colunaMobile" style={Invisible}>
             <li className="mobileNav" style={animacao}>
-              <a>Home</a>
+              <A onClick={HandleClick} href="#Home" >Home</A>
             </li>
             <li className="mobileNav" style={animacao}>
-              <a>Biography</a>
+              <A onClick={HandleClick} href="#Biografia" >Biography</A>
             </li>
             <li className="mobileNav" style={animacao}>
-              <a>Videos</a>
+              <A onClick={HandleClick} href="#Videos" >Videos</A>
             </li>
             <li className="mobileNav" style={animacao}>
-              <a>Contact</a>
+              <A onClick={HandleClick} href="#Sobre" >About</A>
             </li>
             <li className="mobileNav" style={animacao}>
-              <a>About</a>
+              <A onClick={HandleClick} href="#Contact">Contact</A>
             </li>
           </ul>
 
@@ -273,6 +297,10 @@ export default function () {
               Paraibrass
             </a>
           </u>
+        </div>
+
+        <div className="goToTop" onClick={toTop} >
+          <i className="fa-solid fa-angle-up Top" ></i>
         </div>
       </section>
     </div>

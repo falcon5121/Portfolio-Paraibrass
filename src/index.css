@@ -79,6 +79,15 @@
         font-size: 2vw;
     }
 
+    div.goToTop {
+        width: 6vw;
+        height: 6vw;
+    }
+
+    div.goToTop > i {
+        font-size: 4vw;
+    }
+
 }
 
 
@@ -219,6 +228,17 @@
     .pagina6 section.final > .divisao2, .final> .divisao1> h3 {
         font-size: 1.7rem;
     }
+
+    div.goToTop {
+        width: 7vw;
+        height: 7vw;
+    }
+
+    div.goToTop > i {
+        font-size: 5vw;
+    }
+
+
 
 }
 
@@ -376,6 +396,16 @@
 
         font-size: 2.3rem;
     }
+
+
+    div.goToTop {
+        width: 9vw;
+        height: 9vw;
+    }
+
+    div.goToTop > i.Top {
+        font-size: 7vw;
+    }
 } 
 
 
@@ -420,8 +450,20 @@
     .form > div.buttonSubmit > span {
         font-size: 2.3rem;
     }
-    
+
+    div.goToTop {
+        width: 11vw;
+        height: 11vw;
+    }
+
+    div.goToTop > i.Top {
+        font-size: 9vw;
+    }
+
+
 }
+
+
 
 @media (max-width: 393px) {
 
@@ -452,6 +494,16 @@
         margin-block: 2vw;
         height: 11vw;
         width: 23vw;
+    }
+
+
+    div.goToTop {
+        width: 14vw;
+        height: 14vw;
+    }
+
+    div.goToTop > i.Top {
+        font-size: 12vw;
     }
 
 }
@@ -1288,7 +1340,7 @@ u > a {
     width: 96%;
     height: 95%;
     object-fit: cover;
-    object-position: 0 0.01vw 1vw;
+    object-position: 0 0.1vw;
     border-radius: var(--bordar2);
     margin-left: .5vw;
     margin-top: .5vw;
@@ -1323,7 +1375,7 @@ u > a {
 .letreiro3 > span , .letreiro4 > span {
     font-weight: 900;
     font-size: 3.6vw;
-    text-shadow: var(--sombra4);
+    text-shadow: var(--sombra5);
     letter-spacing: .4vw;
 }
 
@@ -1359,6 +1411,7 @@ u > a {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    height: 90%;
 }
 
 .pagina5 > .form {
@@ -1483,7 +1536,7 @@ u > a {
     height: 60%;
     background-color: var(--third-color);
     position: absolute;
-    top: 500%;
+    top: 490%;
     scroll-snap-align: center ;
     color: #fff;
     display: flex;
@@ -1542,3 +1595,33 @@ u > a {
 }
 
 
+.goToTop {
+
+    /* width: 60px;
+    height: 60px; */
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    border: solid 2px var(--primary-color);
+    z-index:10;
+    background-color: #fff;
+    color: var(--third-color);
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+
+    box-shadow: var(--sombra4);
+
+    
+}
+
+
+.Top {
+    cursor: pointer;
+    font-size: 2vw;
+    color: var(--third-color);
+}

@@ -62,8 +62,8 @@ export default function () {
                   className="testeVideos"
                   src={user.videoUrl}
                   title="YouTube video player"
-                  frameborder="0"
-                  allowfullscreen
+                  frameBorder="0"
+                  allowFullScreen
                 ></iframe>
 
                 <article className="conteudo">
