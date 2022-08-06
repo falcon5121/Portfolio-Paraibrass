@@ -19,6 +19,11 @@ query DadosSexteto {
     biografiaTexto {
       text
     }
+    bioCurta2
+    bioCurta3
+    bioCurta4
+    bioCurta5
+    bioCurta6
   }
 }
 `
@@ -64,7 +69,13 @@ export default React.memo(function () {
       {data.componenteSexteto.map(user => (
         <SwiperSlide key={user.ident} className="slide" 
         >
-          <Card texto={user.curtaBiografia} imagem={user.urlImg}/>
+          <Card texto={user.curtaBiografia}
+            texto1={user.bioCurta2}
+            texto2={user.bioCurta3}
+            texto3={user.bioCurta4}
+            texto4={user.bioCurta5}
+            texto5={user.bioCurta6}
+            imagem={user.urlImg}/>
         </SwiperSlide>
       ))}
       

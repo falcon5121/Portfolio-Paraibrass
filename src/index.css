@@ -387,14 +387,14 @@
         justify-content: center;
     }*/
 
-    .pagina5 > div.form {
+    .pagina5 > form.form {
         width: 50%;
     } 
 
 
 
 
-    .form > div.buttonSubmit > span {
+    .form > button.buttonSubmit > span {
 
         font-size: 2.3rem;
     }
@@ -417,7 +417,7 @@
         flex-direction: column;
     }
 
-    .pagina5 > div.form {
+    .pagina5 > form.form {
         order: 1;
     }
 
@@ -425,7 +425,7 @@
         height:10%;
     }
 
-    .pagina5 > div.form {
+    .pagina5 > form.form {
         width: 80%;
     }
 
@@ -440,16 +440,16 @@
         
     }
 
-    div.form > input::placeholder, div.form >  textarea::placeholder {
+    form.form > input::placeholder, form.form >  textarea::placeholder {
         font-size: 1.5rem;
     }
 
-    div.form > input, div.form > textarea {
+    form.form > input, form.form > textarea {
         font-size: 1.5rem;
     }
 
 
-    .form > div.buttonSubmit > span {
+    .form > button.buttonSubmit > span {
         font-size: 2.3rem;
     }
 
@@ -496,7 +496,7 @@
         display: none;
     }
 
-    div.buttonSubmit {
+    button.buttonSubmit {
         margin-block: 2vw;
         height: 11vw;
         width: 23vw;
@@ -529,7 +529,7 @@
 
    html {
     scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
+    /* scroll-snap-type: y mandatory; */
     overflow-y: scroll;
     font-size: 10px;
    }
@@ -1109,10 +1109,10 @@ u > a {
 
     font-size: 1.7rem;
     color: #fff;
-
+    font-weight: 500;
     padding: 0 2vmax;
     
-    height: 100%;
+    /* height: 100%; */
 
 }
 
@@ -1416,7 +1416,7 @@ u > a {
     text-align: start;
     padding-top: 1.5vw;
     padding-inline: 1.5vw;
-    font-size: 1.5vmax;
+    font-size: 1.4vmax;
     font-weight: 300;
 }
 
@@ -1482,6 +1482,7 @@ u > a {
     align-items: center;
     box-shadow: var(--sombra4);
     transition: 0.2s ease;
+    border: none;
 }
 
 .buttonSubmit:hover {
@@ -1642,4 +1643,10 @@ u > a {
     cursor: pointer;
     font-size: 2vw;
     color: var(--third-color);
+}
+
+.socialLinks > li > a{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
 }

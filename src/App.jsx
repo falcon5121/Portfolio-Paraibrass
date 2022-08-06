@@ -47,10 +47,6 @@ query DadosSexteto {
 `
 
 
-
-
-
-
 export default function () {
 
   const firebaseConfig = {
@@ -240,14 +236,17 @@ export default function () {
         </article>
 
         <article className="pagina5" id="Contact">
-          <div className="form">
-          <input type="text" placeholder="Nome"/>
-          <input type="text" placeholder="Telefone"/>
-          <input type="text" placeholder="Assunto"/>
-          {/* <input type="text" placeholder="Descrição" row="10" cols=""/> */}
-          <textarea id="Descrição" cols="10" rows="5" placeholder="Descrição"></textarea>
-          <div className="buttonSubmit"><span>Enviar</span></div>
-          </div>
+          
+          <form action="https://formspree.io/f/myyvgayz" method="POST" className="form">
+
+          <input type="text" placeholder="Nome" name="Nome" required/>
+          <input type="text" placeholder="Telefone" name="Telefone" required/>
+          <input type="text" placeholder="Assunto" name="Assunto" required/>
+          <textarea id="Descrição" cols="10" rows="5" placeholder="Descrição" name="Descrição" required></textarea>
+          
+          <button className="buttonSubmit"  type="submit"><span>Enviar</span></button>
+
+          </form>
 
           <article className="contactAbout">
           <div className="contactUs"><h1>FALE CONOSCO</h1></div>
@@ -261,10 +260,10 @@ export default function () {
         </article>
         <article className="pagina6">
         <section className="redes">
-          <ul>
-            <li>Twitter</li>
-            <li>Instagram</li>
-            <li>Youtube</li>
+          <ul className="socialLinks">
+            {/* <li>Twitter</li> */}
+            <li><a href="https://www.instagram.com/sextetoparaibrass/"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+            <li><a href="https://www.youtube.com/channel/UC8DjZrH9Gmb_ODtAfjk4zRQ"><i class="fa-brands fa-youtube"></i> Youtube</a></li>
           </ul>
         </section>
 
@@ -304,9 +303,9 @@ export default function () {
           </ul>
 
           <u className="footer">
-            <a href="#" style={animacao}>
+            <A onClick={HandleClick} href="#Home" style={animacao}>
               Paraibrass
-            </a>
+            </A>
           </u>
         </div>
 

@@ -20,6 +20,11 @@ client.query({
           biografiaTexto {
             text
           }
+          bioCurta2
+          bioCurta3
+          bioCurta4
+          bioCurta5
+          bioCurta6
         }
         videosYoutubes {
           ident
