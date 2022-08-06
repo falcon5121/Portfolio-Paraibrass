@@ -27,6 +27,16 @@ client.query({
           musicaNome
           musicaDescricao
         }
+        fotosSites {
+          primeiraImgMaior
+          primeiraImgMenor
+          biografiaImgMedio
+          biografiaImgMenor
+          biografiaImgNormal
+        }
+        textoBiografiaSextetos {
+          biografiaSexteto
+        }
       }
     `
 }).then((result) => console.log(result))

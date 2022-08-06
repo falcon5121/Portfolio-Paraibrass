@@ -13,11 +13,11 @@ import SearchIcon from "@mui/icons-material/Search";
 }
 
 import logo from "./imagens/Paraibrass_logo.svg";
-import sexteto from "./imagens/FIMUS.png";
-import menor from "./imagens/menor.png"
-import Sexteto2 from "./imagens/Foto Paraibrass 6.png"
-import SextetoMedio from "./imagens/SextetoMedio.png"
-import SextetoMenor from "./imagens/SextetoMenor.png"
+// import sexteto from "./imagens/FIMUS.png"; 
+// import menor from "./imagens/FIMUSMenor.png"
+// import Sexteto2 from "./imagens/Foto Paraibrass 6.png"
+// import SextetoMedio from "./imagens/SextetoMedio.png"
+// import SextetoMenor from "./imagens/SextetoMenor.png"
 {
   /* Arquivos CSS */
 }
@@ -28,6 +28,23 @@ import CarouselReact from "./carouselReact";
 import VideosCarousel from "./videosCarousel";
 import styled from "styled-components";
 
+import { useQuery, gql } from "@apollo/client";
+
+const SextetoData = gql`
+query DadosSexteto {
+  fotosSites {
+    primeiraImgMaior
+    primeiraImgMenor
+    biografiaImgMedio
+    biografiaImgMenor
+    biografiaImgNormal
+  }
+  textoBiografiaSextetos {
+    biografiaSexteto
+  }
+}
+
+`
 
 
 
@@ -54,16 +71,13 @@ export default function () {
     window.scroll(0,0)
   }
 
-  
-  
+
+
+
   addEventListener("scroll", () => {
     const button = document.querySelector(".goToTop")
-    if(window.scrollY !== 0) {
-      button.style.display = "flex"
-    } else {
-      button.style.display = "none"
-    }
-  })
+        window.scrollY !== 0 ? (button.style.display ="flex" ) : (button.style.display ="none" )
+        })
 
   
  
@@ -96,8 +110,11 @@ export default function () {
     color: #fff;
     text-decoration: none;
   `
+  const { loading, error, data} = useQuery(SextetoData)
 
-  
+  if (loading) return <p>Loading...</p>
+  if (error) return <p>Error</p>
+
   
   return (
     <div className="vetor">
@@ -150,11 +167,11 @@ export default function () {
             <div className="backSexteto">
               <picture>
                 <source
-                  srcSet={sexteto}
+                  srcSet={data.fotosSites[0].primeiraImgMaior}
                   className="imgSexteto"
                   media="(min-width: 865px)"
                 />
-                <img src={menor} alt="imgSexteto" className="imgSexteto" />
+                <img src={data.fotosSites[0].primeiraImgMenor} alt="imgSexteto" className="imgSexteto" />
               </picture>
             </div>
           </section>
@@ -201,9 +218,9 @@ export default function () {
             <div className="primeiraParte">
             <article className="imgLabel">
               <picture className="imgSobre">
-                <source media="(max-width: 1365px, min-width: 866px)" srcSet={ SextetoMedio } />
-                <source media="(max-width: 865px)" srcSet={ SextetoMenor } />
-                <img src={ Sexteto2 } alt="" />
+                <source media="(max-width: 1365px, min-width: 866px)" srcSet={ data.fotosSites[0].biografiaImgMedio } />
+                <source media="(max-width: 865px)" srcSet={ data.fotosSites[0].biografiaImgMenor } />
+                <img src={ data.fotosSites[0].biografiaImgNormal } alt="" />
               </picture>
             </article>
               <div className="letreiro3">
@@ -213,13 +230,7 @@ export default function () {
             </div>
             <article className="text">
               <h3>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Repellendus ea quo eaque ullam, tenetur laborum, pariatur
-                necessitatibus obcaecati non beatae rem deleniti quam, dolor eos
-                labore eius nemo similique fugit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Repellendus ea quo eaque ullam, tenetur laborum, pariatur
-                necessitatibus obcaecati non beatae rem deleniti quam, dolor eos
-                labore eius nemo similique fugit.
+                {data.textoBiografiaSextetos[0].biografiaSexteto}
               </h3>
               <div>
               <img src={logo} alt="Logo do Paraibrass" />

@@ -31,7 +31,7 @@
 
 
 
-@media (min-height: 1368px) {
+@media (min-height: 1367px) {
 
     div.retRed{
         z-index: 1;
@@ -66,6 +66,9 @@
         height: 90%;
     }
     
+    article.text > h3 {
+        font-size: 2rem;
+    }
     
 }
 
@@ -76,7 +79,7 @@
     }
 
     article.text > h3 {
-        font-size: 2vw;
+        font-size: 1.9rem;
     }
 
     div.goToTop {
@@ -104,7 +107,7 @@
     }
 
     article.text > h3 {
-        font-size: 2.3vw;
+        font-size: 1.7rem;
     }
 
 
@@ -212,7 +215,7 @@
     }
 
     article.text > h3 {
-        font-size: 2.5vw;
+        font-size: 1.5rem;
     }
 
 
@@ -326,7 +329,6 @@
 
 
 
-
     div.primeiraParte {
         width: 80%;
         height: 40%;
@@ -355,7 +357,7 @@
 
     .inBox > .text > h3 {
         text-align: justify;
-        font-size: 2.4vmax;
+        font-size: 1.6rem;
         padding-inline: 3vw;
     }
 
@@ -460,6 +462,10 @@
         font-size: 9vw;
     }
 
+    .inBox > .text > h3 {
+        font-size: 1.4rem;
+    }
+
 
 }
 
@@ -504,6 +510,18 @@
 
     div.goToTop > i.Top {
         font-size: 12vw;
+    }
+
+
+    .inBox > article.text > div {
+        width: 50px;
+        height: 50px;
+        
+        
+    }
+
+    .inBox > article.text > div > img {
+    transform: scale(0.5);
     }
 
 }
