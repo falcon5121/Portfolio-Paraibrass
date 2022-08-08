@@ -75,7 +75,9 @@ export default React.memo(function () {
             texto3={user.bioCurta4}
             texto4={user.bioCurta5}
             texto5={user.bioCurta6}
-            imagem={user.urlImg}/>
+            imagem={user.urlImg}
+            nome={user.nome}
+            />
         </SwiperSlide>
       ))}
       

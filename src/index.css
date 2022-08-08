@@ -1083,6 +1083,14 @@ u > a {
     border-radius: 50%;
 
 }
+.Card > h1 {
+    text-align: center;
+    color: #fff;
+    margin-block: 1vw;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-shadow: var(--sombra5);
+}
 
 .Card div.linha {
 
@@ -1092,7 +1100,7 @@ u > a {
     /* margin-left: 10%;
     margin-right: 10%; */
     margin-inline: 10%;
-    margin-top: 1vmax;
+    /* margin-top: 1vmax; */
 
     /* width: 12vmax; */
 
@@ -1101,7 +1109,7 @@ u > a {
 }
 
 .caixaTexto {
-    height: 77%;
+    height: 65%;
     overflow-y: auto;
 }
 
@@ -1111,7 +1119,8 @@ u > a {
     color: #fff;
     font-weight: 500;
     padding: 0 2vmax;
-    
+    text-shadow: 2px 2px  rgba(0, 0, 0, 0.52);
+    /* text-shadow: var(--sombra5); */
     /* height: 100%; */
 
 }

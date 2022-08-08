@@ -1,11 +1,12 @@
 import React from "react";
 
-export default function ({ imagem, texto , texto1 , texto2, texto3, texto4, texto5 }) {
+export default function ({ imagem, texto , texto1 , texto2, texto3, texto4, texto5, nome }) {
     return (
         <>
         <section className="Cards">
             <div className="Card">
                 <img src={ imagem } alt="Icone de Perfil" />
+                <h1>{nome}</h1>
                 <div className="linha"></div>
                 <div className="caixaTexto">
                 <p>{ texto } </p>
